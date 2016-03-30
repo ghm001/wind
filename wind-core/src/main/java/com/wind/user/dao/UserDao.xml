@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.wind.user.dao.UserDao">
+    <resultMap id = "userInfo" type="UserVO">
+        <result property = "userId" column ="user_id"/>
+        <result property = "password" column ="password"/>
+        <result property = "userName" column ="user_name"/>
+        <result property = "roleId" column ="role_id"/>
+        <result property = "salesmanId" column ="salesman_id"/>
+    </resultMap>
+    <select id="getUserInfo" resultType="UserVO">
+  select  *     from  user_info    where user_id=#{userId}
+    </select>
+</mapper>

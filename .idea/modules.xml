@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/wind-core/wind-core.iml" filepath="$PROJECT_DIR$/wind-core/wind-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wind-parent.iml" filepath="$PROJECT_DIR$/wind-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wind-webapp/wind-webapp.iml" filepath="$PROJECT_DIR$/wind-webapp/wind-webapp.iml" />
+    </modules>
+  </component>
+</project>
+
