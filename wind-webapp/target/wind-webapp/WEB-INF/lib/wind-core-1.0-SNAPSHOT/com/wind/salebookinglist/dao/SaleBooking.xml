@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wind.salebookinglist.dao.SaleBookingDao">
+    <resultMap id="SimpleBookingResult" type="SimpleBookingInfoVO">
+        <id column="booking_id" property="bookingId"></id>
+        <result column="client_name" property="clientName"></result>
+        <result column="booking_sales" property="bookingSales"></result>
+        <result column="operate_time" property="operateTime"></result>
+    </resultMap>
+
+  <select id="getAllSimpleBookingInfo" resultMap="SimpleBookingResult" parameterType="int">
+   SELECT booking_id ,client_name ,booking_sales ,operate_time  FROM sale_booking  WHERE salesman_id =#{salesmanId}
+  </select>
+
+
+  <select id="getMoreBookingInfo" resultMap="MoreBookingResult" parameterType="String">
+         SELECT operator_name,delivery_date,s1.sale_weight,area_name,cargo_name,s2.sale_weight,s2.sale_item,fact_unitprice,sale_unitprice,fact_money,sale_money ,client_name,booking_sales,operate_time FROM sale_booking s1,sale_booking_dts  s2 WHERE s1.booking_id=s2.booking_id  AND s1.booking_id=#{bookingId}
+     </select>
+
+    <resultMap id="MoreBookingResult" type="MoreBookingInfoVO">
+        <result property="operatorName"  column="operator_name"/>
+        <result property="deliveryDate" column="delivery_date"/>
+        <result property="totalWeight" column="sale_weight"/>
+        <result property="area" column="area_name"/>
+
+
+         <association property="simpleBookingInfo" column="" javaType="SimpleBookingInfoVO">
+             <result column="client_name" property="clientName"></result>
+             <result column="booking_sales" property="bookingSales"></result>
+             <result column="operate_time" property="operateTime"></result>
+         </association>
+        
+            <collection property="oneBookingPriceInfos" ofType="OneBookingPriceInfoVO">
+                <result property="cargoName" column="cargo_name"/>
+               <result property="saleWeight" column="sale_weight"/>
+               <result property="saleItem" column="sale_item"/>
+               <result property="factUnitprice" column="fact_unitprice"/>
+              <result property="saleUnitPrice" column="sale_unitprice"/>
+            <result property="factMoney" column="fact_money"/>
+           <result property="saleMoney" column="sale_money"/>
+          </collection>
+    </resultMap>
+
+</mapper>
