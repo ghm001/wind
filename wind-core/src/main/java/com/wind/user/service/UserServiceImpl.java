@@ -13,8 +13,14 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao  userDao;
     @Override
-    public UserVO getUserInfo(String userId) {
-        return userDao.getUserInfo(userId);
+    public UserVO getUserInfo(String userName) {
+        return userDao.getUserInfo(userName);
     }
+
+    @Override
+    public void saveUserInfo(UserVO userVO) {
+        userDao.saveUserInfo(userVO);
+    }
+
 
 }

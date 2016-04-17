@@ -9,5 +9,7 @@ import com.wind.utils.annotation.mybatis.MyBatisScan;
  */
 @MyBatisScan
 public interface UserDao {
-    UserVO getUserInfo(String userId);
+    UserVO getUserInfo(String userName);
+
+    void saveUserInfo(UserVO userVO);
 }

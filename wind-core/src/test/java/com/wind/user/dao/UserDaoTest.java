@@ -1,6 +1,5 @@
 package com.wind.user.dao;
 
-import com.wind.user.model.UserVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -13,7 +12,7 @@ import static org.junit.Assert.*;
 public class UserDaoTest {
 
     @Test
-    public void getUser() {
-       
+    public void testGetUserList() throws Exception {
+
     }
 }
