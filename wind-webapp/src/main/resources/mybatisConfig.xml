@@ -22,8 +22,14 @@
     <!-- 数据库超过25000秒仍未响应则超时 -->
     <setting name="defaultStatementTimeout" value="25000" />
 </settings>
+
 <typeAliases>
     <typeAlias alias="UserVO" type="com.wind.user.model.UserVO"/>
+  <typeAlias alias="BrandVO" type="com.wind.carMessage.model.BrandVO"/>
+    <typeAlias type="com.wind.carMessage.model.BrandTypeVO" alias="BrandTypeVO"/>
+    <typeAlias type="com.wind.carMessage.model.CarInfoVO" alias="CarInfoVO"/>
+    <typeAlias type="com.wind.order.model.OrderVO" alias="OrderVO"/>
+    <typeAlias type="com.wind.carMessage.model.ZnwhInfoVO" alias="ZnwhInfoVO"/>
 
 </typeAliases>
 </configuration>

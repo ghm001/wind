@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wind.carMessage.dao.CarMessageDao">
+    <resultMap id="getBrandInfo" type="BrandVO">
+        <id property="id" column="id"></id>
+        <result property="brand" column="brand"></result>
+        <result property="carFlag" column="carFlag"></result>
+       <collection property="brandTypeList" ofType="BrandTypeVO">
+           <result property="name" column="name"></result>
+       </collection>
+    </resultMap>
+
+    <resultMap id="getCarInfo" type="CarInfoVO">
+        <id property="carInfoId" column="carInfoId"></id>
+        <result property="brandIndex" column="brandIndex"></result>
+        <result property="brandTypeIndex" column="brandTypeIndex"/>
+        <result property="carFlag" column="carFlag"/>
+        <result property="provinceIndex" column="provinceIndex"/>
+        <result property="seatCount" column="seatCount"/>
+        <result property="chassisNum" column="chassisNum"/>
+        <result property="carLicenceTail" column="carLicenceTail"/>
+        <result property="doorCount" column="doorCount"/>
+        <result property="engineNum" column="engineNum"/>
+        <result property="name" column="name"/>
+        <result property="phoneNum" column="phoneNum"/>
+        <result property="mileage" column="mileage"/>
+        <result property="oddGasAmount" column="oddGasAmount"/>
+        <result property="isGoodEngine" column="isGoodEngine"/>
+        <result property="isGoodTran" column="isGoodTran"/>
+        <result property="isGoodLight" column="isGoodLight"/>
+        <result property="state" column="state"/>
+    </resultMap>
+
+    <resultMap id="znwhInfo" type="ZnwhInfoVO">
+      <result property="userId" column="user_id"/>
+      <result property="mileage"  column="mileage"/>
+        <result property="oddGasAmount"  column="oddGasAmount"/>
+        <result property="isGoodEngine"  column="isGoodEngine"/>
+        <result property="isGoodTran"  column="isGoodTran"/>
+        <result property="isGoodLight"  column="isGoodLight"/>
+    </resultMap>
+
+
+    <select id="getCarBrandInfo" resultMap="getBrandInfo">
+       SELECT m.id,m.brand,t.name,m.carFlag FROM car_message m,car_type t WHERE m.id=t.id
+    </select>
+
+    <select id="getAllCarInfo" resultMap="getCarInfo">
+        select * from car_info order by state desc ;
+    </select>
+
+    <insert id="addCarInfo" parameterType="CarInfoVO">
+        INSERT INTO car_info(brandIndex,brandTypeIndex,carFlag,provinceIndex,seatCount,chassisNum,carLicenceTail,doorCount,engineNum,name,phoneNum,mileage,oddGasAmount,isGoodEngine,isGoodTran,isGoodLight,state)
+        VALUES(#{brandIndex},#{brandTypeIndex},#{carFlag},#{provinceIndex},#{seatCount},#{chassisNum},#{carLicenceTail},#{doorCount},#{engineNum},#{name},#{phoneNum},#{mileage},#{oddGasAmount},#{isGoodEngine},#{isGoodTran},#{isGoodLight},#{state});
+    </insert>
+
+    <update id="updateCarInfo" parameterType="CarInfoVO">
+        update car_info set brandIndex=#{brandIndex},brandTypeIndex=#{brandTypeIndex},carFlag=#{carFlag},provinceIndex=#{provinceIndex},seatCount=#{seatCount},chassisNum=#{chassisNum},carLicenceTail=#{carLicenceTail},doorCount=#{doorCount},engineNum=#{engineNum},name=#{name},phoneNum=#{phoneNum},mileage=#{mileage},oddGasAmount=#{oddGasAmount},isGoodEngine=#{isGoodEngine},isGoodTran=#{isGoodTran},isGoodLight=#{isGoodLight},state=#{state} where carInfoId=#{carInfoId}
+    </update>
+
+    <delete id="deleteCarInfo" parameterType="CarInfoVO">
+        delete from car_info where carInfoId=#{carInfoId}
+    </delete>
+
+    <update id="clearState" >
+        update car_info set state=0 where state=1
+    </update>
+
+    <select id="getZnwhInfo" resultMap="znwhInfo" parameterType="int">
+        select user_id,mileage,oddGasAmount,isGoodEngine,isGoodTran,isGoodLight from car_info where user_id=#{userId} and state=1
+    </select>
+
+     <update id="updateZnwhInfo" parameterType="ZnwhInfoVO" >
+         update car_info set mileage=#{mileage},oddGasAmount=#{oddGasAmount},isGoodEngine=#{isGoodEngine},isGoodTran=#{isGoodTran},isGoodLight=#{isGoodLight} where user_id=#{userId} and state=1
+     </update>
+
+    <select id="quryUser" parameterType="int" resultMap="znwhInfo">
+        select * from car_info where state=1 and user_id=#{userId}
+    </select>
+
+</mapper>

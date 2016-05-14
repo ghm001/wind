@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wind.order.dao.OrderDao">
+    <resultMap id="orderInfo" type="OrderVO">
+        <id property="orderId" column="orderId"></id>
+        <result property="orderState" column="orderState"/>
+        <result property="cusName" column="cusName"/>
+        <result property="cusPhoneNum" column="cusPhoneNum"/>
+        <result property="cusPlateNum" column="cusPlateNum"/>
+        <result property="gasStationName" column="gasStationName"/>
+        <result property="gasStationAddress" column="gasStationAddress"/>
+        <result property="gasType" column="gasType"/>
+        <result property="gasLitre" column="gasLitre"/>
+        <result property="gasSinglePrice" column="gasSinglePrice"/>
+        <result property="gasSumPrice" column="gasSumPrice"/>
+        <result property="orderTime" column="orderTime" javaType="Date"/>
+    </resultMap>
+
+     <insert id="addOrderInfo" parameterType="OrderVO">
+         insert into order_info(orderState,cusName,cusPhoneNum,cusPlateNum,gasStationName,gasStationAddress,gasType,gasLitre,gasSinglePrice,gasSumPrice,orderTime)
+         values (#{orderState},#{cusName},#{cusPhoneNum},#{cusPlateNum},#{gasStationName},#{gasStationAddress},#{gasType},#{gasLitre},#{gasSinglePrice},#{gasSumPrice},#{orderTime})
+     </insert>
+
+    <select id="getOrderInfos" resultMap="orderInfo">
+        select * from order_info order by orderTime desc ;
+    </select>
+
+    <delete id="deleteOrderInfo" parameterType="int" >
+        delete from order_info where orderId=#{orderId}
+    </delete>
+
+    <update id="changeOrderState" parameterType="int">
+        update order_info set orderState=1 where orderId=#{orderId}
+    </update>
+    
+    <select id="getWzfOrderInfos" resultMap="orderInfo">
+        select * from order_info where orderState=0 order by orderTime desc
+    </select>
+
+    <select id="getYzfOrderInfos" resultMap="orderInfo">
+        select * from order_info where orderState=1 order by orderTime desc
+    </select>
+</mapper>

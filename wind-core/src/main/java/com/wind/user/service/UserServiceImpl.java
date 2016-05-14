@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by Administrator on 2015/12/21.
+ * 为了想要的、我才一直在战斗。
+ * Created by qiuYong on 2015/12/21.
  */
 @Service
 public class UserServiceImpl implements UserService {
@@ -20,6 +21,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public void saveUserInfo(UserVO userVO) {
         userDao.saveUserInfo(userVO);
+    }
+
+    @Override
+    public void addUserIcon(UserVO userVO) {
+     userDao.addUserIcon(userVO);
+    }
+
+    @Override
+    public void updateUserInfo(UserVO userVO) {
+        userDao.updateUserInfo(userVO);
     }
 
 

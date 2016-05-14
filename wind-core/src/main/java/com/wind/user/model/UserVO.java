@@ -1,28 +1,28 @@
 package com.wind.user.model;
 
 /**
- * Created by Administrator on 2016/3/8.
+ * 为了想要的、我才一直在战斗。
+ * Created by qiuYong on 2016/3/8.
  */
 public class UserVO {
     private  String userName;//用户名
     private String userPass;//用户密码
     private  String nickname;//昵称
     private String sex;//性别
-    private String age;//年龄
+    private int age;//年龄
     private String driverNum;//驾驶证号
+    private Object userIconContent;//图片的字符串
     private  String message;//登录验证
 
     public UserVO() {
     }
 
-    public UserVO(String userName, String userPass, String nickname, String sex, String age, String driverNum, String message) {
-        this.userName = userName;
-        this.userPass = userPass;
-        this.nickname = nickname;
-        this.sex = sex;
-        this.age = age;
-        this.driverNum = driverNum;
-        this.message = message;
+    public Object getUserIconContent() {
+        return userIconContent;
+    }
+
+    public void setUserIconContent(Object userIconContent) {
+        this.userIconContent = userIconContent;
     }
 
     public String getUserName() {
@@ -57,11 +57,11 @@ public class UserVO {
         this.sex = sex;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -81,16 +81,5 @@ public class UserVO {
         this.message = message;
     }
 
-    @Override
-    public String toString() {
-        return "UserVO{" +
-                "userName='" + userName + '\'' +
-                ", userPass='" + userPass + '\'' +
-                ", nickname='" + nickname + '\'' +
-                ", sex='" + sex + '\'' +
-                ", age='" + age + '\'' +
-                ", driverNum='" + driverNum + '\'' +
-                ", message='" + message + '\'' +
-                '}';
-    }
+
 }
