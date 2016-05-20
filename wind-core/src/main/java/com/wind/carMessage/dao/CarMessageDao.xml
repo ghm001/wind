@@ -41,6 +41,15 @@
         <result property="isGoodLight"  column="isGoodLight"/>
     </resultMap>
 
+    <resultMap id="weizhangInfo" type="WeiZhangInfoVO">
+        <result property="name" column="name"/>
+        <result property="provinceIndex"  column="provinceIndex"/>
+        <result property="carLicenceTail"  column="carLicenceTail"/>
+        <result property="engineNum"  column="engineNum"/>
+        <result property="chassisNum"  column="chassisNum"/>
+        <result property="isGoodLight"  column="isGoodLight"/>
+    </resultMap>
+
 
     <select id="getCarBrandInfo" resultMap="getBrandInfo">
        SELECT m.id,m.brand,t.name,m.carFlag FROM car_message m,car_type t WHERE m.id=t.id
@@ -71,7 +80,11 @@
         select user_id,mileage,oddGasAmount,isGoodEngine,isGoodTran,isGoodLight from car_info where user_id=#{userId} and state=1
     </select>
 
-     <update id="updateZnwhInfo" parameterType="ZnwhInfoVO" >
+    <select id="getWeiZhangInfo" resultMap="weizhangInfo" parameterType="int">
+        select name,provinceIndex,carLicenceTail,engineNum,isGoodTran,chassisNum from car_info where user_id=#{userId} and state=1
+    </select>
+
+     <update id="updateZnwhInfo" parameterType="ZnwhInfoVO">
          update car_info set mileage=#{mileage},oddGasAmount=#{oddGasAmount},isGoodEngine=#{isGoodEngine},isGoodTran=#{isGoodTran},isGoodLight=#{isGoodLight} where user_id=#{userId} and state=1
      </update>
 

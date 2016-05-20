@@ -74,7 +74,9 @@ public class OrderController {
 
     @ResponseBody
     @RequestMapping(value = "/Order/GetYzfOrderInfos",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
-    public String getYzfOrderInfos(){
+    public String getYzfOrderInfos(HttpServletRequest request){
+        String path = request.getSession().getServletContext().getRealPath("/img/background");
+        System.out.println(path);
         List<OrderVO> list=new ArrayList<OrderVO>();
         list=orderService.getYzfOrderInfos();
         for (int i=0;i<list.size();i++){

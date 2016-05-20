@@ -3,6 +3,7 @@ package com.wind.carMessage.service;
 import com.wind.carMessage.dao.CarMessageDao;
 import com.wind.carMessage.model.BrandVO;
 import com.wind.carMessage.model.CarInfoVO;
+import com.wind.carMessage.model.WeiZhangInfoVO;
 import com.wind.carMessage.model.ZnwhInfoVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -61,6 +62,11 @@ public class CarMessageServiceImpl implements CarMessageService{
     @Override
     public ZnwhInfoVO quryUser(int userId) {
         return  carMessageDao.quryUser(userId);
+    }
+
+    @Override
+    public WeiZhangInfoVO getWeiZhangInfo(int userId) {
+        return carMessageDao.getWeiZhangInfo(userId);
     }
 
 

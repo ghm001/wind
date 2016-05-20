@@ -30,6 +30,7 @@
     <typeAlias type="com.wind.carMessage.model.CarInfoVO" alias="CarInfoVO"/>
     <typeAlias type="com.wind.order.model.OrderVO" alias="OrderVO"/>
     <typeAlias type="com.wind.carMessage.model.ZnwhInfoVO" alias="ZnwhInfoVO"/>
+    <typeAlias type="com.wind.carMessage.model.WeiZhangInfoVO" alias="WeiZhangInfoVO"/>
 
 </typeAliases>
 </configuration>

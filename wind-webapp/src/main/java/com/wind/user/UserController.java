@@ -12,11 +12,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import sun.misc.BASE64Decoder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.sql.Blob;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,8 +41,7 @@ public class UserController {
         UserVO userVO;
         userVO=userService.getUserInfo(userName);
 
-
-        System.out.println(userVO.getUserIconContent());
+        System.out.println(userVO.getUserIconUrl());
 
         if (userVO!=null&&userVO.getUserPass().equals(userPass)){
             userVO.setMessage("success");
@@ -60,7 +63,6 @@ public class UserController {
         UserVO userVO = new UserVO();
         userVO.setUserName(userName);
         userVO.setUserPass(userPass);
-
         userService.saveUserInfo(userVO);
         return "OK";
      }
@@ -86,26 +88,37 @@ public class UserController {
     public String addUserIcon(HttpServletRequest request){
         String userName=request.getParameter("userName");
         String s=request.getParameter("userIconContent");
+        //获取服务器存放图片的路径
+        String path=request.getSession().getServletContext().getRealPath("/img/user_icon");
+        //生成图片的随机数
+        Date date=new Date();
+        DateFormat dateFormat=new SimpleDateFormat("yyyyMMddHHmmss");
+        String time=dateFormat.format(date);
 
-        byte[]  userIconContent= s.getBytes();
-       /*
-        byte[] swww = new byte[1024*20];
+        //图片文件的名称
+        String fileName="/"+userName.trim()+time.trim()+".png";
 
-        File img  = new File("D:\\intelij-workspace\\wind\\wind-webapp\\target\\wind-webapp\\img\\background\\" + "ddd.png" );
-        try{
-            FileOutputStream os = new FileOutputStream("D:\\intelij-workspace\\wind\\wind-webapp\\target\\wind-webapp\\img\\background\\" + "ddd.png");
-            os.write(userIconContent,0,userIconContent.length);
+        //创建图片文件
+       File img=new File(path+fileName);
+
+       String oldFile=userService.getUserInfo(userName).getUserIconUrl();
+        File file=new File(path+oldFile);
+        if(file.exists()){
+            file.delete();
+        }
+        try {
+            //向服务器端写文件
+            byte [] user=new BASE64Decoder().decodeBuffer(s);
+            OutputStream os=new FileOutputStream(img);
+            os.write(user,0,user.length);
             os.flush();
             os.close();
-        } catch (Exception r) {
-
-        }*/
-
-        System.out.println(userName);
-        System.out.println(userIconContent);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         UserVO userVO=new UserVO();
         userVO.setUserName(userName);
-        userVO.setUserIconContent(userIconContent);
+        userVO.setUserIconUrl(fileName);
         userService.addUserIcon(userVO);
         return null;
     }
@@ -130,6 +143,15 @@ public class UserController {
         userService.updateUserInfo(userVO);
         return "ok";
     }
+
+    @ResponseBody
+    @RequestMapping(value = "UploadImage",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
+    public String uploadImage(HttpServletRequest request){
+
+        return null;
+    }
+
+
 
 }
 

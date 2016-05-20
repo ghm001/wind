@@ -11,18 +11,18 @@ public class UserVO {
     private String sex;//性别
     private int age;//年龄
     private String driverNum;//驾驶证号
-    private Object userIconContent;//图片的字符串
     private  String message;//登录验证
+    private String userIconUrl;
 
     public UserVO() {
     }
 
-    public Object getUserIconContent() {
-        return userIconContent;
+    public String getUserIconUrl() {
+        return userIconUrl;
     }
 
-    public void setUserIconContent(Object userIconContent) {
-        this.userIconContent = userIconContent;
+    public void setUserIconUrl(String userIconUrl) {
+        this.userIconUrl = userIconUrl;
     }
 
     public String getUserName() {
@@ -81,5 +81,17 @@ public class UserVO {
         this.message = message;
     }
 
-
+    @Override
+    public String toString() {
+        return "UserVO{" +
+                "userName='" + userName + '\'' +
+                ", userPass='" + userPass + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age=" + age +
+                ", driverNum='" + driverNum + '\'' +
+                ", message='" + message + '\'' +
+                ", userIconUrl='" + userIconUrl + '\'' +
+                '}';
+    }
 }

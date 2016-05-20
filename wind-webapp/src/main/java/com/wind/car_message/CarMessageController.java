@@ -2,6 +2,7 @@ package com.wind.car_message;
 
 import com.wind.carMessage.model.BrandVO;
 import com.wind.carMessage.model.CarInfoVO;
+import com.wind.carMessage.model.WeiZhangInfoVO;
 import com.wind.carMessage.model.ZnwhInfoVO;
 import com.wind.carMessage.service.CarMessageService;
 import net.sf.json.JSONArray;
@@ -249,5 +250,19 @@ public class CarMessageController {
        }else {
            return "查询失败,用户没有设置默认车辆。";
        }
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/Car/GetWeiZhangInfo",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
+    public String getWeiZhangInfo(HttpServletRequest request){
+        int userId=Integer.parseInt(request.getParameter("userId").toString().trim());
+        WeiZhangInfoVO weiZhangInfoVO=carMessageService.getWeiZhangInfo(userId);
+        if(weiZhangInfoVO==null){
+            return "error";
+        }else {
+            JSONObject jsonObject=new JSONObject();
+            String json=jsonObject.fromObject(weiZhangInfoVO).toString();
+            return json;
+        }
     }
 }

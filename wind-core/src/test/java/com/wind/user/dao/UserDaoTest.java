@@ -19,11 +19,10 @@ public class UserDaoTest {
 
     //测试用户密码
     @Test
-   public void testGetUserInfo( ) {
+   public void testGetUserInfo() {
     UserVO userVO;
          String userName="13166837709";
     userVO=userService.getUserInfo(userName);
-        System.out.println(userVO.getUserPass());
-
+        System.out.println(userVO.getUserIconUrl());
     }
 }

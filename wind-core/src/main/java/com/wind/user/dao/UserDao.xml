@@ -9,11 +9,12 @@
         <result property = "age" column ="age"/>
         <result property = "sex" column ="sex"/>
         <result property = "driverNum" column ="driver_num"/>
-        <result property="userIconContent" column="user_icon" jdbcType="BLOB"/>
+        <result property="userIconUrl" column="userIconUrl"/>
+
     </resultMap>
 
     <select id="getUserInfo" resultType="UserVO">
-  select  *     from  user_info    where user_name=#{userName}
+      select  *  from  user_info  where user_name=#{userName}
     </select>
 
     <insert id="saveUserInfo" parameterType="UserVO"  >
@@ -21,7 +22,7 @@
     </insert>
 
     <update id="addUserIcon" parameterType="UserVO" >
-        update  user_info set user_icon=#{userIconContent} where user_name=#{userName}
+        update  user_info set userIconUrl=#{userIconUrl} where user_name=#{userName}
     </update>
 
     <update id="updateUserInfo" parameterType="UserVO">

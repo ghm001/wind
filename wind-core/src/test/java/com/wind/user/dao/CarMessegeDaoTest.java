@@ -1,9 +1,6 @@
 package com.wind.user.dao;
 
-import com.wind.carMessage.model.BrandTypeVO;
-import com.wind.carMessage.model.BrandVO;
-import com.wind.carMessage.model.CarInfoVO;
-import com.wind.carMessage.model.ZnwhInfoVO;
+import com.wind.carMessage.model.*;
 import com.wind.carMessage.service.CarMessageService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -102,6 +99,15 @@ public class CarMessegeDaoTest {
         int userId=1;
         ZnwhInfoVO znwhInfoVO=carMessageService.getZnwhInfo(userId);
         System.out.println(znwhInfoVO.getMileage());
+    }
+
+    @Test
+    public void getWeiZhangInfo(){
+        int userId=1;
+        WeiZhangInfoVO weiZhangInfoVO;
+        weiZhangInfoVO=carMessageService.getWeiZhangInfo(userId);
+        System.out.println(weiZhangInfoVO.getName());
+
     }
 
 

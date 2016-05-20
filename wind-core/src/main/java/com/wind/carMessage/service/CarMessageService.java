@@ -2,6 +2,7 @@ package com.wind.carMessage.service;
 
 import com.wind.carMessage.model.BrandVO;
 import com.wind.carMessage.model.CarInfoVO;
+import com.wind.carMessage.model.WeiZhangInfoVO;
 import com.wind.carMessage.model.ZnwhInfoVO;
 
 import java.util.List;
@@ -37,5 +38,8 @@ public interface CarMessageService {
 
     //查询用户是否存在
     ZnwhInfoVO quryUser(int userId);
+
+    //获取违章相关的车辆信息
+    WeiZhangInfoVO getWeiZhangInfo(int userId);
 
 }
