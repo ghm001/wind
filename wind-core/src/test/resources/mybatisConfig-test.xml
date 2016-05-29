@@ -4,32 +4,32 @@
 <configuration>
     <settings>
         <!-- 全局映射器启用缓存 -->
-        <setting name="cacheEnabled" value="false" />
+        <setting name="cacheEnabled" value="false"/>
         <!-- 查询时，关闭关联对象即时加载以提高性能 -->
-        <setting name="lazyLoadingEnabled" value="true" />
+        <setting name="lazyLoadingEnabled" value="true"/>
         <!--开启驼峰式映射-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <!-- 对于未知的SQL查询，允许返回不同的结果集以达到通用的效果 -->
-        <setting name="multipleResultSetsEnabled" value="true" />
+        <setting name="multipleResultSetsEnabled" value="true"/>
         <!-- 允许使用列标签代替列名 -->
-        <setting name="useColumnLabel" value="true" />
+        <setting name="useColumnLabel" value="true"/>
         <!-- 允许使用自定义的主键值(比如由程序生成的UUID 32位编码作为键值)，数据表的PK生成策略将被覆盖 -->
-        <setting name="useGeneratedKeys" value="true" />
+        <setting name="useGeneratedKeys" value="true"/>
         <!-- 给予被嵌套的resultMap以字段-属性的映射支持 -->
-        <setting name="autoMappingBehavior" value="FULL" />
+        <setting name="autoMappingBehavior" value="FULL"/>
         <!-- 对于批量更新操作缓存SQL以提高性能  -->
-        <setting name="defaultExecutorType" value="BATCH" />
+        <setting name="defaultExecutorType" value="BATCH"/>
         <!-- 数据库超过25000秒仍未响应则超时 -->
-        <setting name="defaultStatementTimeout" value="25000" />
+        <setting name="defaultStatementTimeout" value="25000"/>
     </settings>
     <typeAliases>
         <typeAlias alias="UserVO" type="com.wind.user.model.UserVO"/>
-        <typeAlias alias="BrandVO"  type="com.wind.carMessage.model.BrandVO"/>
+        <typeAlias alias="BrandVO" type="com.wind.carMessage.model.BrandVO"/>
         <typeAlias alias="BrandTypeVO" type="com.wind.carMessage.model.BrandTypeVO"/>
         <typeAlias type="com.wind.carMessage.model.CarInfoVO" alias="CarInfoVO"/>
         <typeAlias type="com.wind.order.model.OrderVO" alias="OrderVO"/>
         <typeAlias type="com.wind.carMessage.model.ZnwhInfoVO" alias="ZnwhInfoVO"/>
         <typeAlias type="com.wind.carMessage.model.WeiZhangInfoVO" alias="WeiZhangInfoVO"/>
-
+        <typeAlias type="com.wind.saying.model.SayingVO" alias="SayingVO"/>
     </typeAliases>
 </configuration>

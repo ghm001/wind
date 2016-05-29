@@ -39,6 +39,6 @@
     </select>
 
     <select id="getYzfOrderInfos" resultMap="orderInfo">
-        select * from order_info where orderState=1 order by orderTime desc
+        select * from order_info where orderState=1 or orderState=2  order by orderTime desc
     </select>
 </mapper>

@@ -31,6 +31,6 @@
     <typeAlias type="com.wind.order.model.OrderVO" alias="OrderVO"/>
     <typeAlias type="com.wind.carMessage.model.ZnwhInfoVO" alias="ZnwhInfoVO"/>
     <typeAlias type="com.wind.carMessage.model.WeiZhangInfoVO" alias="WeiZhangInfoVO"/>
-
+    <typeAlias type="com.wind.saying.model.SayingVO" alias="SayingVO"/>
 </typeAliases>
 </configuration>

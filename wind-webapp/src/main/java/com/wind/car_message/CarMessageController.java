@@ -218,21 +218,21 @@ public class CarMessageController {
            znwhInfoVO.setOddGasAmount(oddGasAmount);
            //车灯异常情况
            double isGoodEngine=Math.random();
-           if(isGoodEngine>0.8){
+           if(isGoodEngine>0.95){
                znwhInfoVO.setIsGoodEngine(0);
            }else {
                znwhInfoVO.setIsGoodEngine(1);
            }
            //变速器异常情况
            double isGoodLight=Math.random();
-           if(isGoodLight>0.9){
+           if(isGoodLight>0.95){
                znwhInfoVO.setIsGoodLight(0);
            }else {
                znwhInfoVO.setIsGoodLight(1);
            }
            //车引擎异常情况
            double isGoodTran=Math.random();
-           if(isGoodLight>0.9){
+           if(isGoodLight>0.95){
                znwhInfoVO.setIsGoodTran(0);
            }else {
                znwhInfoVO.setIsGoodTran(1);
