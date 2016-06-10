@@ -40,7 +40,7 @@ public class UserController {
         System.out.println(userName);
         UserVO userVO;
         userVO=userService.getUserInfo(userName);
-
+        System.out.println(userVO.getUserId()+"");
         System.out.println(userVO.getUserIconUrl());
 
         if (userVO!=null&&userVO.getUserPass().equals(userPass)){

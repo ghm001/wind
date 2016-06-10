@@ -29,6 +29,7 @@ public class OrderController {
     @RequestMapping(value = "/Order/AddOrderInfo",method = RequestMethod.POST,produces = "text/plain;charset=utf-8")
     public void addOrderInfo(HttpServletRequest request){
         int orderState=0;
+        int userId=Integer.parseInt(request.getParameter("userId"));
         String cusName=request.getParameter("cusName");
         System.out.println(cusName);
         String cusPhoneNum=request.getParameter("cusPhoneNum");
@@ -40,15 +41,16 @@ public class OrderController {
         double gasSinglePrice=Double.parseDouble(request.getParameter("gasSinglePrice"));
         double gasSumPrice=Double.parseDouble(request.getParameter("gasSumPrice"));
         Date orderTime=new Date();
-        OrderVO orderVO=new OrderVO(orderState,cusName,cusPhoneNum,cusPlateNum,gasStationName,gasStationAddress,gasType,gasLitre,gasSinglePrice,gasSumPrice,orderTime);
+        OrderVO orderVO=new OrderVO(orderState,cusName,cusPhoneNum,cusPlateNum,gasStationName,gasStationAddress,gasType,gasLitre,gasSinglePrice,gasSumPrice,orderTime,userId);
        orderService.addOrderInfo(orderVO);
     }
 
     @ResponseBody
       @RequestMapping(value = "/Order/GetOrderInfos",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
-      public String getOrderInfos(){
+      public String getOrderInfos(HttpServletRequest request){
+        int userId=Integer.parseInt(request.getParameter("userId"));
         List<OrderVO> list=new ArrayList<OrderVO>();
-        list=orderService.getOrderInfos();
+        list=orderService.getOrderInfos(userId);
         for (int i=0;i<list.size();i++){
             Date date=list.get(i).getOrderTime();
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -60,9 +62,10 @@ public class OrderController {
 
     @ResponseBody
     @RequestMapping(value = "/Order/GetWzfOrderInfos",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
-    public String getWzfOrderInfos(){
+    public String getWzfOrderInfos(HttpServletRequest request){
+        int userId=Integer.parseInt(request.getParameter("userId"));
         List<OrderVO> list=new ArrayList<OrderVO>();
-        list=orderService.getWzfOrderInfos();
+        list=orderService.getWzfOrderInfos(userId);
         for (int i=0;i<list.size();i++){
             Date date=list.get(i).getOrderTime();
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -75,10 +78,9 @@ public class OrderController {
     @ResponseBody
     @RequestMapping(value = "/Order/GetYzfOrderInfos",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
     public String getYzfOrderInfos(HttpServletRequest request){
-        String path = request.getSession().getServletContext().getRealPath("/img/background");
-        System.out.println(path);
+      int userId=Integer.parseInt(request.getParameter("userId"));
         List<OrderVO> list=new ArrayList<OrderVO>();
-        list=orderService.getYzfOrderInfos();
+        list=orderService.getYzfOrderInfos(userId);
         for (int i=0;i<list.size();i++){
             Date date=list.get(i).getOrderTime();
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

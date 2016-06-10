@@ -23,10 +23,11 @@ public class ImageUtil {
 
         //图片文件的名称
         String fileName="/"+imgName.trim()+time.trim()+".png";
+        System.out.println(fileName);
 
         //创建图片文件
         File imgFile=new File(path+fileName);
-
+        System.out.println(path+fileName);
 
         try {
             //向服务器端写文件

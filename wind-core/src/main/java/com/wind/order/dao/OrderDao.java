@@ -14,7 +14,7 @@ public interface OrderDao {
     void addOrderInfo(OrderVO orderVO);
 
     //查询订单里面的信息
-    List<OrderVO> getOrderInfos();
+    List<OrderVO> getOrderInfos(int userId);
 
     //取消某个订单
     void deleteOrderInfo(int orderId);
@@ -23,8 +23,8 @@ public interface OrderDao {
     void changeOrderState(int orderId);
 
     //查询未支付订单的信息
-    List<OrderVO> getWzfOrderInfos();
+    List<OrderVO> getWzfOrderInfos(int userId);
 
     //查询已支付订单信息
-    List<OrderVO> getYzfOrderInfos();
+    List<OrderVO> getYzfOrderInfos(int userId);
 }

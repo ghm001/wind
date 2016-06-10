@@ -3,40 +3,56 @@ package com.wind.saying.model;
 import java.util.Date;
 
 /**
- * Created by Administrator on 2016/5/29.
+ * 所有的悲伤都由自己去承担。
+ * 努力永远都不会错。
+ * Created by Qiuyong on 2016/5/3.
+ */
+
+/**
+ * 与说说相关的实体类
  */
 public class SayingVO {
-    private int sayingId;
-    private  int userId;
-    private String nickName;
-    private String userIconUrl;
-    private Date postTime;
-    private String sayingContent;
-    private String postAddress;
-    private int sayingType;
-    private String img1;
-    private String img2;
-    private String img3;
-    private String img4;
-    private String img5;
-    private String img6;
+    private int sayingId;//说说id号
+    private int userId;//用户id号
+    private String nickName;//用户昵称
+    private String userIconUrl;//用户头像指定地址
+    private String strTime;//发表说说时间
+    private Date postTime;//发表说说时间
+    private String sayingContent;//发表说说的内容
+    private String postAddress;//发表说说时的地址
+    private int sayingType;//发表说说类型
+    private String img1;//发表说说图片1
+    private String img2;//发表说说图片2
+    private String img3;//发表说说图片3
+    private String img4;//发表说说图片4
+    private String img5;//发表说说图片5
+    private String img6;//发表说说图片6
 
     public SayingVO() {
 
     }
 
-    public SayingVO(int userId, Date postTime, String sayingContent, String postAddress, int sayingType, String img1, String img2, String img3, String img4, String img5, String img6) {
+    public SayingVO(int userId, Date postTime, String strTime, String sayingContent, String postAddress, int sayingType, String img1, String img2, String img3, String img4, String img5, String img6) {
         this.userId = userId;
         this.postTime = postTime;
         this.sayingContent = sayingContent;
         this.postAddress = postAddress;
         this.sayingType = sayingType;
+        this.strTime = strTime;
         this.img1 = img1;
         this.img2 = img2;
         this.img3 = img3;
         this.img4 = img4;
         this.img5 = img5;
         this.img6 = img6;
+    }
+
+    public String getStrTime() {
+        return strTime;
+    }
+
+    public void setStrTime(String strTime) {
+        this.strTime = strTime;
     }
 
     public int getSayingId() {
@@ -151,22 +167,5 @@ public class SayingVO {
         this.img6 = img6;
     }
 
-    @Override
-    public String toString() {
-        return "SayingVO{" +
-                "userId=" + userId +
-                ", nickName='" + nickName + '\'' +
-                ", userIconUrl='" + userIconUrl + '\'' +
-                ", postTime=" + postTime +
-                ", sayingContent='" + sayingContent + '\'' +
-                ", postAddress='" + postAddress + '\'' +
-                ", sayingType='" + sayingType + '\'' +
-                ", img1='" + img1 + '\'' +
-                ", img2='" + img2 + '\'' +
-                ", img3='" + img3 + '\'' +
-                ", img4='" + img4 + '\'' +
-                ", img5='" + img5 + '\'' +
-                ", img6='" + img6 + '\'' +
-                '}';
-    }
+
 }

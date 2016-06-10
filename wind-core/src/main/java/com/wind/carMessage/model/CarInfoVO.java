@@ -1,9 +1,16 @@
 package com.wind.carMessage.model;
 
 /**
- * Created by Administrator on 2016/4/30.
+ * 所有的悲伤都由自己去承担。
+ * 努力永远都不会错。
+ * Created by Qiuyong on 2016/5/3.
+ */
+
+/**
+ * 指定用户的车辆信息
  */
 public class CarInfoVO {
+    private int userId;//用户id
     private int carInfoId;//车辆信息id
 
     private int brandIndex;//车型号索引；
@@ -30,6 +37,14 @@ public class CarInfoVO {
     private int state;//车状态-默认车辆还是其他
 
     public CarInfoVO() {
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public int getCarInfoId() {

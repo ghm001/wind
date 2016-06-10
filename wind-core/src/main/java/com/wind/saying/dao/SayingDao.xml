@@ -2,33 +2,34 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wind.saying.dao.SayingDao">
-<resultMap id="syaingInfo" type="SayingVO">
-    <result column="saying_id" property="sayingId"/>
-    <result column="user_id" property="userId"/>
-    <result column="nickname" property="nickName"/>
-    <result column="userIconUrl" property="userIconUrl"/>
-    <result column="post_time" property="postTime"  javaType="Date"/>
-    <result column="sying_content" property="sayingContent"/>
-    <result column="post_address" property="postAddress"/>
-    <result column="saying_type"  property="sayingType"/>
-    <result column="img1" property="img1"/>
-    <result column="img2" property="img2"/>
-    <result column="img3" property="img3"/>
-    <result column="img4" property="img4"/>
-    <result  column="img5" property="img5"/>
-    <result column="img6" property="img6"/>
-</resultMap>
+    <resultMap id="syaingInfo" type="SayingVO">
+        <result column="saying_id" property="sayingId"/>
+        <result column="user_id" property="userId"/>
+        <result column="nickname" property="nickName"/>
+        <result column="userIconUrl" property="userIconUrl"/>
+        <result column="str_time" property="strTime"/>
+        <result column="post_time" property="postTime" javaType="Date"/>
+        <result column="sying_content" property="sayingContent"/>
+        <result column="post_address" property="postAddress"/>
+        <result column="saying_type" property="sayingType"/>
+        <result column="img1" property="img1"/>
+        <result column="img2" property="img2"/>
+        <result column="img3" property="img3"/>
+        <result column="img4" property="img4"/>
+        <result column="img5" property="img5"/>
+        <result column="img6" property="img6"/>
+    </resultMap>
 
     <select id="getCzwSayings" resultMap="syaingInfo">
-        SELECT u.user_id,u.nickname,u.userIconUrl,s.saying_id,s.post_time,s.post_address,s.saying_content,s.saying_type,s.img1,s.img2,s.img3,s.img4,s.img5,s.img6 FROM user_saying_info s,user_info u WHERE u.user_id=s.user_id and s.saying_type=1;
+        SELECT u.user_id,u.nickname,u.userIconUrl,s.saying_id,s.str_time,s.post_time,s.post_address,s.saying_content,s.saying_type,s.img1,s.img2,s.img3,s.img4,s.img5,s.img6 FROM user_saying_info s,user_info u WHERE u.user_id=s.user_id and s.saying_type=1 group  by post_time desc ;
     </select>
 
     <select id="getQzSayings" resultMap="syaingInfo">
-        SELECT u.user_id,u.nickname,u.userIconUrl,s.saying_id,s.post_time,s.post_address,s.saying_content,s.saying_type,s.img1,s.img2,s.img3,s.img4,s.img5,s.img6 FROM user_saying_info s,user_info u WHERE u.user_id=s.user_id and (s.saying_type=2 or s.saying_type=3);
+        SELECT u.user_id,u.nickname,u.userIconUrl,s.saying_id,s.str_time,s.post_time,s.post_address,s.saying_content,s.saying_type,s.img1,s.img2,s.img3,s.img4,s.img5,s.img6 FROM user_saying_info s,user_info u WHERE u.user_id=s.user_id and (s.saying_type=2 or s.saying_type=3) group  by post_time desc ;
     </select>
 
     <insert id="addSaying" parameterType="SayingVO">
-        insert into user_saying_info(user_id,post_time,post_address,saying_content,saying_type,img1,img2,img3,img4,img5,img6)values(#{userId},#{postTime},#{sayingContent},#{postAddress},#{sayingType},#{img1},#{img2},#{img3},#{img4},#{img5},#{img6});
+        insert into user_saying_info(user_id,str_time,post_time,post_address,saying_content,saying_type,img1,img2,img3,img4,img5,img6)values(#{userId},#{strTime},#{postTime},#{postAddress},#{sayingContent},#{sayingType},#{img1},#{img2},#{img3},#{img4},#{img5},#{img6});
     </insert>
 
     <delete id="deleteSaying" parameterType="int">

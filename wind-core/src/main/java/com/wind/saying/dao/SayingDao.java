@@ -12,7 +12,7 @@ import java.util.List;
 @MyBatisScan
 public interface SayingDao {
     //查询车周围信息
-  public List<SayingVO>  getCzwSayings();
+    public List<SayingVO> getCzwSayings();
 
     //查询求助信息
     public List<SayingVO> getQzSayings();
@@ -21,7 +21,7 @@ public interface SayingDao {
     public void addSaying(SayingVO sayingVO);
 
     //删除某一条说说
-    public void  deleteSaying(int sayingId);
+    public void deleteSaying(int sayingId);
 
     //得到某一条说说
     public SayingVO getSaying(int sayingId);

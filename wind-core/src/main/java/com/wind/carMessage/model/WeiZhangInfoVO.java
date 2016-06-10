@@ -1,7 +1,13 @@
 package com.wind.carMessage.model;
 
 /**
- * Created by Administrator on 2016/5/19.
+ * 所有的悲伤都由自己去承担。
+ * 努力永远都不会错。
+ * Created by Qiuyong on 2016/5/3.
+ */
+
+/**
+ * 默认车辆违章信息的实体类
  */
 public class WeiZhangInfoVO {
     private String name;//车主姓名

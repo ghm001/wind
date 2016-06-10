@@ -16,7 +16,7 @@ public interface CarMessageService {
    List<BrandVO>  getCarBrandInfo();
 
     //获得绑定的所有车辆信息
-    List<CarInfoVO> getAllCarInfo();
+    List<CarInfoVO> getAllCarInfo(int userId);
 
     //增加一个车辆信息
     void addCarInfo(CarInfoVO carInfoVO);

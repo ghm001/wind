@@ -2,18 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c01dcdf2-25a4-4367-aa5c-87b8b6e18a6f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/ImageUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/saying/SayingController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/SayingDaoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/model/SayingVO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandTypeVO.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandTypeVO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandVO.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandVO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/CarInfoVO.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/CarInfoVO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/car_message/CarMessageController.java" afterPath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/car_message/CarMessageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.xml" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageService.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageServiceImpl.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/CarMessegeDaoTest.java" afterPath="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/CarMessegeDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/ImageUtil.java" afterPath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/ImageUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/order/OrderController.java" afterPath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/order/OrderController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.xml" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/test/resources/mybatisConfig-test.xml" afterPath="$PROJECT_DIR$/wind-core/src/test/resources/mybatisConfig-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-webapp/src/main/resources/mybatisConfig.xml" afterPath="$PROJECT_DIR$/wind-webapp/src/main/resources/mybatisConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/OrderDaoTest.java" afterPath="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/OrderDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderService.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/model/OrderVO.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/model/OrderVO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/saying/SayingController.java" afterPath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/saying/SayingController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.xml" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/SayingDaoTest.java" afterPath="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/SayingDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/model/SayingVO.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/model/SayingVO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/user/UserController.java" afterPath="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/user/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.xml" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/UserDaoTest.java" afterPath="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/UserDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserService.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/model/UserVO.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/model/UserVO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/WeiZhangInfoVO.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/WeiZhangInfoVO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/ZnwhInfoVO.java" afterPath="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/ZnwhInfoVO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wind.iws" />
@@ -104,139 +123,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SayingDao.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.xml">
+      <file leaf-file-name="WeiZhangInfoVO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/WeiZhangInfoVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="874">
-              <caret line="38" column="66" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
-              <folding>
-                <marker date="1464532711985" expanded="true" signature="1053:1288" placeholder="SELECT u.use..user_saying_info..." />
-                <marker date="1464532711985" expanded="true" signature="1367:1623" placeholder="SELECT u.use..user_saying_info..." />
-                <marker date="1464532711985" expanded="true" signature="1701:1941" placeholder="insert into ..." />
-                <marker date="1464532711985" expanded="true" signature="2016:2072" placeholder="DELETE FROM ..." />
-                <marker date="1464532711985" expanded="true" signature="2167:2225" placeholder="select * fro..user_saying_info..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SayingDaoTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/SayingDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="817" max-vertical-offset="1330">
-              <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#761#771#0" expanded="true" />
-                <element signature="e#977#987#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SayingController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/saying/SayingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7266187" vertical-offset="837" max-vertical-offset="2166">
-              <caret line="60" column="78" selection-start-line="60" selection-start-column="78" selection-end-line="60" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1093#1103#0" expanded="true" />
-                <element signature="e#1519#1529#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/ImageUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="931">
-              <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="532">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1482">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/user/UserController.java">
+      <file leaf-file-name="ZnwhInfoVO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/ZnwhInfoVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="2679">
-              <caret line="88" column="7" selection-start-line="88" selection-start-column="7" selection-end-line="122" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1672">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SayingVO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/model/SayingVO.java">
+      <file leaf-file-name="OrderController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/order/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2470">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38356164" vertical-offset="1247" max-vertical-offset="2147">
+              <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
               <folding>
-                <element signature="e#1109#1110#0" expanded="true" />
-                <element signature="e#1140#1141#0" expanded="true" />
-                <element signature="e#1185#1186#0" expanded="true" />
-                <element signature="e#1225#1226#0" expanded="true" />
-                <element signature="e#2227#2228#0" expanded="true" />
-                <element signature="e#2260#2261#0" expanded="true" />
-                <element signature="e#2309#2310#0" expanded="true" />
-                <element signature="e#2353#2354#0" expanded="true" />
+                <element signature="e#2299#2308#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SayingDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.java">
+      <file leaf-file-name="CarMessageController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/car_message/CarMessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="147" max-vertical-offset="646">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SayingService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="551">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SayingServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="855">
-              <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#565#566#0" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#827#828#0" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="3382" max-vertical-offset="5244">
+              <caret line="178" column="48" selection-start-line="178" selection-start-column="48" selection-end-line="178" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -262,9 +186,6 @@
         <option value="$PROJECT_DIR$/wind-webapp/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/JsonUtil.java" />
         <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/car/CarInfoManageController.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserService.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/car/dao/CarManageDao.java" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/car/service/CarManageService.java" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/car/service/CarManageServiceImpl.java" />
@@ -274,42 +195,45 @@
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/car/dao/CarManageDao" />
         <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/car/CarManageController.java" />
         <option value="$PROJECT_DIR$/wind-core/src/test/resources/applicationContext-test.xml" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandVO.java" />
         <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/carMessage/carMessageController.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/CarInfoVO.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandTypeVO.java" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao" />
-        <option value="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/OrderDaoTest.java" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/SimpleCusInfo.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/model/OrderVO.java" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/SimpleCusInfoVO.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/ZnwhInfoVO.java" />
-        <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/order/OrderController.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/model/UserVO.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/UserDaoTest.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.xml" />
-        <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/user/UserController.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/WeiZhangInfoVO.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/test/resources/mybatisConfig-test.xml" />
+        <option value="$PROJECT_DIR$/wind-webapp/src/main/resources/mybatisConfig.xml" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingService.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.xml" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.xml" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.java" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageService.java" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/CarMessegeDaoTest.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.xml" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.xml" />
-        <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/car_message/CarMessageController.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/test/resources/mybatisConfig-test.xml" />
-        <option value="$PROJECT_DIR$/wind-webapp/src/main/resources/mybatisConfig.xml" />
+        <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/order/OrderController.java" />
+        <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/user/UserController.java" />
         <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/ImageUtil.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/model/SayingVO.java" />
+        <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/saying/SayingController.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserService.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.xml" />
+        <option value="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/UserDaoTest.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/OrderDaoTest.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/SayingDaoTest.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/CarMessegeDaoTest.java" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.xml" />
         <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingService.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingServiceImpl.java" />
-        <option value="$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/SayingDaoTest.java" />
-        <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/saying/SayingController.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/ZnwhInfoVO.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/WeiZhangInfoVO.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/CarInfoVO.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandVO.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandTypeVO.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/model/OrderVO.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/model/SayingVO.java" />
+        <option value="$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/model/UserVO.java" />
+        <option value="$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/car_message/CarMessageController.java" />
       </list>
     </option>
   </component>
@@ -400,8 +324,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-2" />
+    <option name="y" value="1" />
     <option name="width" value="1382" />
     <option name="height" value="741" />
   </component>
@@ -452,16 +376,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wind-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -472,7 +387,160 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-webapp" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-webapp" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-webapp" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-webapp" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="order" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind-webapp" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wind" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="car_message" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -778,7 +846,7 @@
       <method />
     </configuration>
     <configuration default="false" name="wind" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.52" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
-      <option name="OPEN_IN_BROWSER_URL" value="http://10.59.3.167:8080/wind/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://10.163.200.124:8080/wind/" />
       <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
       <deployment>
         <artifact name="wind-webapp:war exploded">
@@ -1024,7 +1092,23 @@
       <workItem from="1464239969047" duration="920000" />
       <workItem from="1464308708621" duration="1866000" />
       <workItem from="1464407640233" duration="1833000" />
-      <workItem from="1464503747570" duration="11750000" />
+      <workItem from="1464503747570" duration="12087000" />
+      <workItem from="1464586785984" duration="9945000" />
+      <workItem from="1464658128672" duration="8172000" />
+      <workItem from="1464705976233" duration="1484000" />
+      <workItem from="1464768456861" duration="2362000" />
+      <workItem from="1464836221373" duration="6395000" />
+      <workItem from="1464920031961" duration="8980000" />
+      <workItem from="1465007706029" duration="4525000" />
+      <workItem from="1465094513791" duration="684000" />
+      <workItem from="1465097551319" duration="9680000" />
+      <workItem from="1465130892445" duration="893000" />
+      <workItem from="1465189719130" duration="8205000" />
+      <workItem from="1465265628411" duration="944000" />
+      <workItem from="1465300382651" duration="873000" />
+      <workItem from="1465386880260" duration="1250000" />
+      <workItem from="1465435921338" duration="5573000" />
+      <workItem from="1465522238456" duration="108000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1460864372637</created>
@@ -1038,14 +1122,18 @@
       <created>1463720133555</created>
       <updated>1463720133555</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="a">
+      <created>1464533479256</created>
+      <updated>1464533479256</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="484101000" />
+    <option name="totallyTimeSpent" value="554511000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="741" extended-state="6" />
+    <frame x="-2" y="1" width="1382" height="741" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1056,27 +1144,27 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46581876" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17329094" sideWeight="0.8872621" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30126184" sideWeight="0.112737924" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.354531" sideWeight="0.112737924" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.055016182" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24508321" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18374817" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27891654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25596184" sideWeight="0.8872621" order="2" side_tool="false" content_ui="tabs" x="449" y="266" width="424" height="253" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27013177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.354531" sideWeight="0.8872621" order="2" side_tool="false" content_ui="tabs" x="449" y="266" width="424" height="253" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32492113" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.055016182" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1132,24 +1220,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/UserDaoTest.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/CarMessegeDaoTest.java</url>
-          <line>107</line>
-          <properties />
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="92" />
+      <option name="time" value="105" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1157,101 +1231,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wind-webapp/wind-webapp.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1330">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="342">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JAVA/jdk/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="12577" max-vertical-offset="37107">
-          <caret line="721" column="0" selection-start-line="721" selection-start-column="0" selection-end-line="721" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/JsonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2470">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.2.8.RELEASE/spring-beans-3.2.8.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44025156" vertical-offset="2362" max-vertical-offset="2546">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/test/resources/applicationContext-test.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42424244" vertical-offset="554" max-vertical-offset="950">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7621777" vertical-offset="145" max-vertical-offset="950">
-          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.2.8.RELEASE/spring-test-3.2.8.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestMethodCallbacks.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47047618" vertical-offset="0" max-vertical-offset="525">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44946235" vertical-offset="0" max-vertical-offset="912">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.5/mybatis-3.2.5.jar!/org/apache/ibatis/builder/MapperBuilderAssistant.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42391303" vertical-offset="1101" max-vertical-offset="1254">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/CarInfoVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="2584">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/ZnwhInfoVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1102">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.8.RELEASE/spring-web-3.2.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33112583" vertical-offset="508" max-vertical-offset="817">
           <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandTypeVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17790262" vertical-offset="0" max-vertical-offset="534">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1276,97 +1259,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37397036" vertical-offset="39" max-vertical-offset="646">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.2.8.RELEASE/spring-test-3.2.8.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33035713" vertical-offset="476" max-vertical-offset="1102">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/model/UserVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="722">
-          <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/WeiZhangInfoVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1368">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="874">
-          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="427" max-vertical-offset="1007">
-          <caret line="68" column="53" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="893">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/CarMessegeDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1614" max-vertical-offset="2109">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68013465" vertical-offset="1306" max-vertical-offset="1900">
-          <caret line="90" column="67" selection-start-line="90" selection-start-column="67" selection-end-line="90" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/UserDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16666667" vertical-offset="0" max-vertical-offset="741">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1374,57 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2083334" vertical-offset="114" max-vertical-offset="912">
           <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/car_message/CarMessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4359401" vertical-offset="3462" max-vertical-offset="4845">
-          <caret line="215" column="53" selection-start-line="215" selection-start-column="53" selection-end-line="215" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0019531" vertical-offset="0" max-vertical-offset="703">
-          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/OrderDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="874">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-          <folding>
-            <element signature="e#1001#1010#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="627">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/model/OrderVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2185">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="931">
-          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,7 +1277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="760">
           <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1440,139 +1284,312 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="779">
           <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7137476" vertical-offset="20" max-vertical-offset="551">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7608286" vertical-offset="280" max-vertical-offset="855">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="608">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="121" max-vertical-offset="608">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/service/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="453" max-vertical-offset="931">
+          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="893">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="874">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/service/CarMessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1026">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/JsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2470">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Tencent Files/494309145/FileRecv/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2429906" vertical-offset="0" max-vertical-offset="969">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/saying/SayingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52579033" vertical-offset="1147" max-vertical-offset="2869">
+          <caret line="92" column="33" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/ImageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="798">
+          <caret line="42" column="5" selection-start-line="16" selection-start-column="3" selection-end-line="42" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="589">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="703">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87751" vertical-offset="0" max-vertical-offset="608">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/dao/UserDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6485944" vertical-offset="304" max-vertical-offset="817">
+          <caret line="33" column="80" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2679">
+          <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JAVA/jdk/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6268041" vertical-offset="0" max-vertical-offset="485">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.7/junit-4.7.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.054347824" vertical-offset="25" max-vertical-offset="1216">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.2.8.RELEASE/spring-test-3.2.8.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.32" vertical-offset="33" max-vertical-offset="1102">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.2.8.RELEASE/spring-test-3.2.8.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestClassCallbacks.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45434782" vertical-offset="0" max-vertical-offset="460">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/dao/CarMessageDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59314775" vertical-offset="1452" max-vertical-offset="1919">
+          <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="627">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="28" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.2.8.RELEASE/spring-test-3.2.8.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestMethodCallbacks.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.28" vertical-offset="240" max-vertical-offset="380">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JAVA/jdk/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6726" max-vertical-offset="10089">
+          <caret line="382" column="29" selection-start-line="382" selection-start-column="29" selection-end-line="382" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.2.8.RELEASE/spring-test-3.2.8.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunBeforeTestMethodCallbacks.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.28" vertical-offset="240" max-vertical-offset="380">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JAVA/jdk/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34980989" vertical-offset="98" max-vertical-offset="361">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/dao/OrderDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52400833" vertical-offset="471" max-vertical-offset="950">
+          <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/CarMessegeDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5657" max-vertical-offset="6137">
+          <caret line="311" column="33" selection-start-line="311" selection-start-column="33" selection-end-line="311" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/OrderDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1016" max-vertical-offset="1520">
+          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/SayingDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1672">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/UserDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1555" max-vertical-offset="2109">
+          <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="893">
+          <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="589">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/CarInfoVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2793">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="1026">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/BrandTypeVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/order/model/OrderVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2413">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/model/SayingVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2223">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/model/UserVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1520">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/WeiZhangInfoVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="1102">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/car_message/CarMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2971" max-vertical-offset="4883">
+          <caret line="178" column="48" selection-start-line="178" selection-start-column="48" selection-end-line="178" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/carMessage/model/ZnwhInfoVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="1254">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/order/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="2109">
-          <caret line="83" column="51" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/user/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="532">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/user/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="2679">
-          <caret line="88" column="7" selection-start-line="88" selection-start-column="7" selection-end-line="122" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/common/ImageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="931">
-          <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.38356164" vertical-offset="1247" max-vertical-offset="2147">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/model/SayingVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="2470">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#2227#2228#0" expanded="true" />
-            <element signature="e#2260#2261#0" expanded="true" />
-            <element signature="e#2309#2310#0" expanded="true" />
-            <element signature="e#2353#2354#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="874">
-          <caret line="38" column="66" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
-          <folding>
-            <marker date="1464532711985" expanded="true" signature="1053:1288" placeholder="SELECT u.use..user_saying_info..." />
-            <marker date="1464532711985" expanded="true" signature="1367:1623" placeholder="SELECT u.use..user_saying_info..." />
-            <marker date="1464532711985" expanded="true" signature="1701:1941" placeholder="insert into ..." />
-            <marker date="1464532711985" expanded="true" signature="2016:2072" placeholder="DELETE FROM ..." />
-            <marker date="1464532711985" expanded="true" signature="2167:2225" placeholder="select * fro..user_saying_info..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/dao/SayingDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="147" max-vertical-offset="646">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="551">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/main/java/com/wind/saying/service/SayingServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="855">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-core/src/test/java/com/wind/user/dao/SayingDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="817" max-vertical-offset="1330">
-          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#761#771#0" expanded="true" />
-            <element signature="e#977#987#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wind-webapp/src/main/java/com/wind/saying/SayingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7266187" vertical-offset="837" max-vertical-offset="2166">
-          <caret line="60" column="78" selection-start-line="60" selection-start-column="78" selection-end-line="60" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1093#1103#0" expanded="true" />
-            <element signature="e#1519#1529#0" expanded="true" />
+            <element signature="e#2299#2308#0" expanded="true" />
           </folding>
         </state>
       </provider>

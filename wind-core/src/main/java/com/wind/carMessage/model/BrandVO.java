@@ -3,13 +3,19 @@ package com.wind.carMessage.model;
 import java.util.List;
 
 /**
- * Created by Administrator on 2016/4/30.
+ * 所有的悲伤都由自己去承担。
+ * 努力永远都不会错。
+ * Created by Qiuyong on 2016/5/3.
+ */
+
+/**
+ * 市场上车品牌的相关信息
  */
 public class BrandVO {
-    private int id;
-    private String brand;
-    private String carFlag;
-    private List<BrandTypeVO> brandTypeList;
+    private int id;//车品牌的id号
+    private String brand;//对应品牌
+    private String carFlag;//对应品牌的图片
+    private List<BrandTypeVO> brandTypeList;//该车品牌的具体型号
 
     public BrandVO() {
     }

@@ -41,9 +41,10 @@ public class CarMessageController {
 
     @ResponseBody
     @RequestMapping(value = "/Car/CarInfo",method = RequestMethod.GET,produces ="text/plain;charset=UTF-8")
-    public String getCarInfoList(){
+    public String getCarInfoList(HttpServletRequest request){
+        int userId=Integer.parseInt(request.getParameter("userId"));
         List<CarInfoVO> list=new ArrayList<CarInfoVO>();
-        list=carMessageService.getAllCarInfo();
+        list=carMessageService.getAllCarInfo(userId);
         String json=new JSONArray().fromObject(list).toString();
         return json;
     }
@@ -54,7 +55,7 @@ public class CarMessageController {
 
         int brandIndex=Integer.parseInt(request.getParameter("brandIndex"));
         System.out.println(brandIndex);
-
+        System.out.println(request.getParameter("userId"));
         int brandTypeIndex=Integer.parseInt(request.getParameter("brandTypeIndex"));
         String carFlag=request.getParameter("carFlag");
         int provinceIndex=Integer.parseInt(request.getParameter("provinceIndex"));
@@ -68,8 +69,10 @@ public class CarMessageController {
         int isGoodEngine=Integer.parseInt(request.getParameter("isGoodEngine"));
         int isGoodTran=Integer.parseInt(request.getParameter("isGoodTran"));
         int isGoodLight=Integer.parseInt(request.getParameter("isGoodLight"));
+        int userId=Integer.parseInt(request.getParameter("userId").trim());
 
         CarInfoVO carInfoVO=new CarInfoVO();
+        carInfoVO.setUserId(userId);
         carInfoVO.setBrandIndex(brandIndex);
         carInfoVO.setBrandTypeIndex(brandTypeIndex);
         carInfoVO.setCarFlag(carFlag);
@@ -93,7 +96,7 @@ public class CarMessageController {
     @ResponseBody
     @RequestMapping(value = "/Car/MyAddCarInfo",method = RequestMethod.GET,produces ="text/plain;charset=UTF-8")
     public void myAddCarInfo(HttpServletRequest request){
-
+       int userId=Integer.parseInt(request.getParameter("userId"));
         int brandIndex=Integer.parseInt(request.getParameter("brandIndex"));
         System.out.println(brandIndex);
         int brandTypeIndex=Integer.parseInt(request.getParameter("brandTypeIndex"));
@@ -111,6 +114,7 @@ public class CarMessageController {
         int isGoodLight=Integer.parseInt(request.getParameter("isGoodLight"));
 
         CarInfoVO carInfoVO=new CarInfoVO();
+        carInfoVO.setUserId(userId);
         carInfoVO.setBrandIndex(brandIndex);
         carInfoVO.setBrandTypeIndex(brandTypeIndex);
         carInfoVO.setCarFlag(carFlag);
@@ -136,9 +140,9 @@ public class CarMessageController {
     public void updateCrInfo(HttpServletRequest request){
 
         int carInfoId=Integer.parseInt(request.getParameter("carInfoId"));
-        System.out.println(carInfoId);
+
         int brandIndex=Integer.parseInt(request.getParameter("brandIndex"));
-        System.out.println(brandIndex);
+
 
         int brandTypeIndex=Integer.parseInt(request.getParameter("brandTypeIndex"));
         String carFlag=request.getParameter("carFlag");
@@ -192,12 +196,12 @@ public class CarMessageController {
     @RequestMapping(value = "/Car/GetZnwhInfo",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
     public String getZnwhInfo(HttpServletRequest request){
       int userId=Integer.parseInt(request.getParameter("userId"));
-        System.out.println(userId + "");
         ZnwhInfoVO znwhInfoVO;
         if(carMessageService.getZnwhInfo(userId)!=null){
             znwhInfoVO=carMessageService.getZnwhInfo(userId);
             JSONObject jsonObject=new JSONObject();
             String json=jsonObject.fromObject(znwhInfoVO).toString();
+            System.out.println(json);
             return json;
         }else {
             return "查询失败,该用户没有设置默认车辆.";
@@ -208,7 +212,7 @@ public class CarMessageController {
     @RequestMapping(value = "/Car/UpdateZnwhInfo",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
     public String updateZnwhInfo(HttpServletRequest request){
         int userId=Integer.parseInt(request.getParameter("userId").trim());
-        System.out.println(userId+"");
+
        // ZnwhInfoVO znwhInfoVO=carMessageService.quryUser(userId);
        if (carMessageService.quryUser(userId)!=null){
            ZnwhInfoVO znwhInfoVO=carMessageService.quryUser(userId);
@@ -240,10 +244,8 @@ public class CarMessageController {
            //行驶的公里数
            Random random=new Random();
            double mileage=znwhInfoVO.getMileage()+(random.nextDouble()*100);
-           System.out.println(mileage);
            BigDecimal bd=new BigDecimal(mileage);
            mileage=bd.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
-           System.out.println(mileage);
            znwhInfoVO.setMileage(mileage);
            carMessageService.updateZnwhInfo(znwhInfoVO);
            return "动态更新智能维护信息数据成功。";

@@ -14,35 +14,35 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
     @Autowired
     OrderDao orderDao;
+
+
     @Override
     public void addOrderInfo(OrderVO orderVO) {
         orderDao.addOrderInfo(orderVO);
     }
 
     @Override
-    public List<OrderVO> getOrderInfos() {
-        return orderDao.getOrderInfos();
+    public List<OrderVO> getOrderInfos(int userId) {
+        return orderDao.getOrderInfos(userId);
     }
 
     @Override
     public void deleteOrderInfo(int orderId) {
-        orderDao.deleteOrderInfo(orderId);
+       orderDao.deleteOrderInfo(orderId);
     }
 
     @Override
     public void changeOrderState(int orderId) {
-        orderDao.changeOrderState(orderId);
+   orderDao.changeOrderState(orderId);
     }
 
     @Override
-    public List<OrderVO> getWzfOrderInfos() {
-        return orderDao.getWzfOrderInfos();
+    public List<OrderVO> getWzfOrderInfos(int userId) {
+        return orderDao.getWzfOrderInfos(userId);
     }
 
     @Override
-    public List<OrderVO> getYzfOrderInfos() {
-        return orderDao.getYzfOrderInfos();
+    public List<OrderVO> getYzfOrderInfos(int userId) {
+        return orderDao.getYzfOrderInfos(userId);
     }
-
-
 }

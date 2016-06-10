@@ -25,9 +25,10 @@ public class CarMessageServiceImpl implements CarMessageService{
     }
 
     @Override
-    public List<CarInfoVO> getAllCarInfo() {
-        return carMessageDao.getAllCarInfo();
+    public List<CarInfoVO> getAllCarInfo(int userId) {
+       return carMessageDao.getAllCarInfo(userId);
     }
+
 
     @Override
     public void addCarInfo(CarInfoVO carInfoVO) {

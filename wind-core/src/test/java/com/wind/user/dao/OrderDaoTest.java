@@ -21,30 +21,64 @@ public class OrderDaoTest {
     @Autowired
     OrderService orderService;
 
+
+    //添加一个订单
     @Test
-        public void addOrderInfo(){
-        OrderVO orderVO=new OrderVO();
-        orderVO.setCusName("黄大炮");
-        Date date=new Date();
-        orderVO.setOrderTime(date);
+    public void addOrderInfo() {
+        OrderVO orderVO = new OrderVO();
+        orderVO.setCusName("黄大大");//车主姓名
+        Date date = new Date();
+        orderVO.setOrderTime(date);//预定时间
+        orderVO.setOrderState(0);
+        orderVO.setCusPhoneNum("13166837709");
+        orderVO.setCusPlateNum("湘A12345");
+        orderVO.setUserId(2);
+        orderVO.setGasStationName("长春土豪金加油站");
+        orderVO.setGasStationAddress("吉林省长春市芭芭拉路");
+        orderVO.setGasType("-20#");//汽油类型
+        orderVO.setGasLitre(5);//升数
+        orderVO.setGasSinglePrice(5.5);//每升的单价
+        orderVO.setGasSumPrice(27.5);//总价
+        orderVO.setUserId(3);//用户id号
         orderService.addOrderInfo(orderVO);
-        }
+    }
+
+    //查询所有订单(包含未支付 已支付 已加油)
     @Test
-    public void getOrderInfos(){
-        List<OrderVO>  list=new ArrayList<OrderVO>();
-        list=orderService.getOrderInfos();
+    public void getOrderInfos() {
+        List<OrderVO> list = new ArrayList<OrderVO>();
+        list = orderService.getOrderInfos(1);
         System.out.println(list.get(0).getCusName());
     }
 
+    //取消某个订单
     @Test
-    public void deleteOrderInfo(){
-        int orderId=1;
+    public void deleteOrderInfo() {
+        int orderId = 11;
         orderService.deleteOrderInfo(orderId);
     }
 
-    @Test
-    public void changeOrderState(){
-        int orderId=2;
+    //改变订单状态
+    void changeOrderState() {
+        int orderId = 4;
         orderService.changeOrderState(orderId);
+    }
+
+    //获取指定用户的未支付订单
+    @Test
+    public void getWzfOrderInfos() {
+        int userId = 1;
+        List<OrderVO> list = new ArrayList<OrderVO>();
+        list = orderService.getWzfOrderInfos(userId);
+        System.out.println(list.get(0).getCusName());
+    }
+
+    //获取指定用户的已支付订单
+    @Test
+    public void getYzfOrderInfos() {
+        int userId = 1;
+        List<OrderVO> list = new ArrayList<OrderVO>();
+        list = orderService.getYzfOrderInfos(userId);
+        System.out.println(list.get(0).getCusName());
     }
 }

@@ -4,6 +4,7 @@
 <mapper namespace="com.wind.order.dao.OrderDao">
     <resultMap id="orderInfo" type="OrderVO">
         <id property="orderId" column="orderId"></id>
+        <result property="userId" column="user_id"/>
         <result property="orderState" column="orderState"/>
         <result property="cusName" column="cusName"/>
         <result property="cusPhoneNum" column="cusPhoneNum"/>
@@ -18,12 +19,12 @@
     </resultMap>
 
      <insert id="addOrderInfo" parameterType="OrderVO">
-         insert into order_info(orderState,cusName,cusPhoneNum,cusPlateNum,gasStationName,gasStationAddress,gasType,gasLitre,gasSinglePrice,gasSumPrice,orderTime)
-         values (#{orderState},#{cusName},#{cusPhoneNum},#{cusPlateNum},#{gasStationName},#{gasStationAddress},#{gasType},#{gasLitre},#{gasSinglePrice},#{gasSumPrice},#{orderTime})
+         insert into order_info(orderState,cusName,cusPhoneNum,cusPlateNum,gasStationName,gasStationAddress,gasType,gasLitre,gasSinglePrice,gasSumPrice,orderTime,user_id)
+         values (#{orderState},#{cusName},#{cusPhoneNum},#{cusPlateNum},#{gasStationName},#{gasStationAddress},#{gasType},#{gasLitre},#{gasSinglePrice},#{gasSumPrice},#{orderTime},#{userId})
      </insert>
 
-    <select id="getOrderInfos" resultMap="orderInfo">
-        select * from order_info order by orderTime desc ;
+    <select id="getOrderInfos" resultMap="orderInfo" parameterType="int">
+        select * from order_info where user_id=#{userId} order by orderTime desc ;
     </select>
 
     <delete id="deleteOrderInfo" parameterType="int" >
@@ -35,10 +36,10 @@
     </update>
     
     <select id="getWzfOrderInfos" resultMap="orderInfo">
-        select * from order_info where orderState=0 order by orderTime desc
+        select * from order_info where  user_id=#{userId} and orderState=0 order by orderTime desc
     </select>
 
     <select id="getYzfOrderInfos" resultMap="orderInfo">
-        select * from order_info where orderState=1 or orderState=2  order by orderTime desc
+        select * from order_info where user_id=#{userId} and (orderState=1 or orderState=2)  order by orderTime desc
     </select>
 </mapper>

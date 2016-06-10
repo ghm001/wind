@@ -19,4 +19,7 @@ public interface UserService {
     //更新用户信息
     void updateUserInfo(UserVO userVO);
 
+    //修改用户密码
+    void updateUserPass(UserVO userVO);
+
 }

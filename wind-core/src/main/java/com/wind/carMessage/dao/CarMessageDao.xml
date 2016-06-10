@@ -13,6 +13,7 @@
 
     <resultMap id="getCarInfo" type="CarInfoVO">
         <id property="carInfoId" column="carInfoId"></id>
+        <result property="userId" column="user_id"/>
         <result property="brandIndex" column="brandIndex"></result>
         <result property="brandTypeIndex" column="brandTypeIndex"/>
         <result property="carFlag" column="carFlag"/>
@@ -55,13 +56,13 @@
        SELECT m.id,m.brand,t.name,m.carFlag FROM car_message m,car_type t WHERE m.id=t.id
     </select>
 
-    <select id="getAllCarInfo" resultMap="getCarInfo">
-        select * from car_info order by state desc ;
+    <select id="getAllCarInfo" resultMap="getCarInfo" parameterType="int">
+        select * from car_info where user_id=#{userId} order by state desc ;
     </select>
 
     <insert id="addCarInfo" parameterType="CarInfoVO">
-        INSERT INTO car_info(brandIndex,brandTypeIndex,carFlag,provinceIndex,seatCount,chassisNum,carLicenceTail,doorCount,engineNum,name,phoneNum,mileage,oddGasAmount,isGoodEngine,isGoodTran,isGoodLight,state)
-        VALUES(#{brandIndex},#{brandTypeIndex},#{carFlag},#{provinceIndex},#{seatCount},#{chassisNum},#{carLicenceTail},#{doorCount},#{engineNum},#{name},#{phoneNum},#{mileage},#{oddGasAmount},#{isGoodEngine},#{isGoodTran},#{isGoodLight},#{state});
+        INSERT INTO car_info(brandIndex,brandTypeIndex,carFlag,provinceIndex,seatCount,chassisNum,carLicenceTail,doorCount,engineNum,name,phoneNum,mileage,oddGasAmount,isGoodEngine,isGoodTran,isGoodLight,state,user_id)
+        VALUES(#{brandIndex},#{brandTypeIndex},#{carFlag},#{provinceIndex},#{seatCount},#{chassisNum},#{carLicenceTail},#{doorCount},#{engineNum},#{name},#{phoneNum},#{mileage},#{oddGasAmount},#{isGoodEngine},#{isGoodTran},#{isGoodLight},#{state},#{userId});
     </insert>
 
     <update id="updateCarInfo" parameterType="CarInfoVO">

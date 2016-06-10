@@ -3,7 +3,13 @@ package com.wind.order.model;
 import java.util.Date;
 
 /**
- * Created by Administrator on 2016/5/2.
+ * 所有的悲伤都由自己去承担。
+ * 努力永远都不会错。
+ * Created by Qiuyong on 2016/5/3.
+ */
+
+/**
+ * 与订单相关的实体类
  */
 public class OrderVO {
     private int orderId;//订单id号
@@ -19,11 +25,12 @@ public class OrderVO {
     private double gasSumPrice;//总共加油的钱
     private Date orderTime;//预订订单时间
     private String strTime;//预约订单
+    private int userId;//指定用户id号
 
     public OrderVO() {
     }
 
-    public OrderVO(int orderState, String cusName, String cusPhoneNum, String cusPlateNum, String gasStationName, String gasStationAddress, String gasType, int gasLitre, double gasSinglePrice, double gasSumPrice, Date orderTime) {
+    public OrderVO(int orderState, String cusName, String cusPhoneNum, String cusPlateNum, String gasStationName, String gasStationAddress, String gasType, int gasLitre, double gasSinglePrice, double gasSumPrice, Date orderTime, int userId) {
         this.orderState = orderState;
         this.cusName = cusName;
         this.cusPhoneNum = cusPhoneNum;
@@ -35,6 +42,15 @@ public class OrderVO {
         this.gasSinglePrice = gasSinglePrice;
         this.gasSumPrice = gasSumPrice;
         this.orderTime = orderTime;
+        this.userId = userId;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public int getOrderId() {
