@@ -46,6 +46,7 @@ public class CarMessageController {
         List<CarInfoVO> list=new ArrayList<CarInfoVO>();
         list=carMessageService.getAllCarInfo(userId);
         String json=new JSONArray().fromObject(list).toString();
+        System.out.println(json);
         return json;
     }
 
