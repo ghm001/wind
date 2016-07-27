@@ -226,7 +226,7 @@ public class CarMessegeDaoTest {
         carInfoVO.setChassisNum("11111");
         carInfoVO.setEngineNum("11111");
         carInfoVO.setCarLicenceTail("");
-        carInfoVO.setName("打球球");
+        carInfoVO.setName("");
         carInfoVO.setPhoneNum("11011011911");
         carInfoVO.setMileage(1);
         carInfoVO.setOddGasAmount(50);
@@ -240,7 +240,7 @@ public class CarMessegeDaoTest {
     //删除指定的车辆信息
     @Test
     public void deleteCarInfo() {
-        int carInfoId = 5;
+        int carInfoId = 6;
         carMessageService.deleteCarInfo(carInfoId);
     }
 
@@ -258,7 +258,8 @@ public class CarMessegeDaoTest {
         System.out.println("引擎:" + znwhInfoVO.getIsGoodEngine());
     }
 
-    /* 动态修改智能维护相关信息（行驶公里数、剩余油量、车灯、变速器、引擎）
+    /*
+     动态修改智能维护相关信息（行驶公里数、剩余油量、车灯、变速器、引擎）
      通知条件自定义规则（每隔10s刷新一次数据）：
      行驶公里数：每次增加的公里数为1-100中的随机数
      剩余汽油量：生成1-100的随机数

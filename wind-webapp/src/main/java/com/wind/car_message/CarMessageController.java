@@ -268,4 +268,19 @@ public class CarMessageController {
             return json;
         }
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/Car/QueryCar",method = RequestMethod.POST,produces = "text/plain;charset=utf-8")
+    public String QueryCar(HttpServletRequest request){
+        int userId=Integer.parseInt(request.getParameter("userId").toString().trim());
+        System.out.println(userId+"");
+       ZnwhInfoVO znwhInfoVO=carMessageService.quryUser(userId);
+        if(znwhInfoVO!=null){
+            System.out.println("exist");
+            return "exist";
+        }else {
+            System.out.println("noexist");
+            return "noexist";
+        }
+    }
 }

@@ -89,7 +89,7 @@ public class UserDaoTest {
         userVO.setAge(50);//年龄
         userVO.setSex("男");//性别
         userVO.setDriverNum("431022199603251313");//驾驶证号
-        userVO.setNickname("我是傲娇的小公举");//昵称
+        userVO.setNickname("克里斯蒂亚诺·罗纳尔多");//昵称
         userVO.setUserName("13037491879");//指定用户对象
         userService.updateUserInfo(userVO);
     }

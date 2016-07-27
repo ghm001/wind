@@ -42,28 +42,29 @@ public class SayingDaoTest {
     @Test
     public void addSaying() {
         SayingVO sayingVO = new SayingVO();
-        sayingVO.setUserId(9);//指定用户id号
+        sayingVO.setUserId(1);//指定用户id号
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String strTime = format.format(date);
         sayingVO.setStrTime(strTime);//说说添加的时间
         sayingVO.setPostTime(date);
-        sayingVO.setSayingContent("哈哈哈，我是个大傻瓜。");
-        sayingVO.setPostAddress("湖南省蓝山县大满村");
+        sayingVO.setSayingContent("大家好，我叫莱奥.罗纳尔多，我擅长左右脚。 今天独中五元，简直是太棒了，分享一下我的进球图。");
+        sayingVO.setPostAddress("吉林省长春市朝阳区延安大街2055号");
+        sayingVO.setSayingType(1);
         sayingService.addSaying(sayingVO);
     }
 
     //删除一条说说
     @Test
     public void delateSaying() {
-        int sayingId = 52;
+        int sayingId = 78;
         sayingService.deleteSaying(sayingId);
     }
 
     //获得某一条说说
     @Test
     public void getSaying() {
-        int sayingId = 46;
+        int sayingId = 79;
         SayingVO sayingVO = new SayingVO();
         sayingVO = sayingService.getSaying(sayingId);
         System.out.println("用户id号：" + sayingVO.getUserId());

@@ -139,7 +139,7 @@ public class SayingController {
             System.out.println(img6Content);
             img6= ImageUtil.uploadImg("img6",path,img6Content);
         }
-        SayingVO sayingVO=new SayingVO(userId,postTime,strTime,postAddress,sayingContent,sayingType,img1,img2,img3,img4,img5,img6);
+        SayingVO sayingVO=new SayingVO(userId,postTime,strTime,sayingContent,postAddress,sayingType,img1,img2,img3,img4,img5,img6);
         sayingService.addSaying(sayingVO);
     }
 

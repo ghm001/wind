@@ -20,7 +20,7 @@ public class OrderVO {
     private String gasStationName;//加油站名称
     private String gasStationAddress;//加油站地址
     private String gasType;//汽油类型
-    private int gasLitre;//汽油升数
+    private Double gasLitre;//汽油升数
     private double gasSinglePrice;//没升汽油的价格
     private double gasSumPrice;//总共加油的钱
     private Date orderTime;//预订订单时间
@@ -30,7 +30,7 @@ public class OrderVO {
     public OrderVO() {
     }
 
-    public OrderVO(int orderState, String cusName, String cusPhoneNum, String cusPlateNum, String gasStationName, String gasStationAddress, String gasType, int gasLitre, double gasSinglePrice, double gasSumPrice, Date orderTime, int userId) {
+    public OrderVO(int orderState, String cusName, String cusPhoneNum, String cusPlateNum, String gasStationName, String gasStationAddress, String gasType, double gasLitre, double gasSinglePrice, double gasSumPrice, Date orderTime, int userId) {
         this.orderState = orderState;
         this.cusName = cusName;
         this.cusPhoneNum = cusPhoneNum;
@@ -109,11 +109,11 @@ public class OrderVO {
         this.gasStationAddress = gasStationAddress;
     }
 
-    public int getGasLitre() {
+    public Double getGasLitre() {
         return gasLitre;
     }
 
-    public void setGasLitre(int gasLitre) {
+    public void setGasLitre(Double gasLitre) {
         this.gasLitre = gasLitre;
     }
 
@@ -157,21 +157,5 @@ public class OrderVO {
         this.strTime = strTime;
     }
 
-    @Override
-    public String toString() {
-        return "OrderVO{" +
-                "orderId=" + orderId +
-                ", orderState=" + orderState +
-                ", cusName='" + cusName + '\'' +
-                ", cusPhoneNum='" + cusPhoneNum + '\'' +
-                ", cusPlateNum='" + cusPlateNum + '\'' +
-                ", gasStationName='" + gasStationName + '\'' +
-                ", gasStationAddress='" + gasStationAddress + '\'' +
-                ", gasType='" + gasType + '\'' +
-                ", gasLitre=" + gasLitre +
-                ", gasSinglePrice=" + gasSinglePrice +
-                ", gasSumPrice=" + gasSumPrice +
-                ", orderTime=" + orderTime +
-                '}';
-    }
+
 }

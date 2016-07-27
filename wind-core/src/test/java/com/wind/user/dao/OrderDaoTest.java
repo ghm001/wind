@@ -26,7 +26,7 @@ public class OrderDaoTest {
     @Test
     public void addOrderInfo() {
         OrderVO orderVO = new OrderVO();
-        orderVO.setCusName("黄大大");//车主姓名
+        orderVO.setCusName("戴维斯.刘娜娜");//车主姓名
         Date date = new Date();
         orderVO.setOrderTime(date);//预定时间
         orderVO.setOrderState(0);
@@ -36,7 +36,7 @@ public class OrderDaoTest {
         orderVO.setGasStationName("长春土豪金加油站");
         orderVO.setGasStationAddress("吉林省长春市芭芭拉路");
         orderVO.setGasType("-20#");//汽油类型
-        orderVO.setGasLitre(5);//升数
+        orderVO.setGasLitre(5.0);//升数
         orderVO.setGasSinglePrice(5.5);//每升的单价
         orderVO.setGasSumPrice(27.5);//总价
         orderVO.setUserId(3);//用户id号
@@ -54,13 +54,13 @@ public class OrderDaoTest {
     //取消某个订单
     @Test
     public void deleteOrderInfo() {
-        int orderId = 11;
+        int orderId = 40;
         orderService.deleteOrderInfo(orderId);
     }
 
     //改变订单状态
     void changeOrderState() {
-        int orderId = 4;
+        int orderId = 41;
         orderService.changeOrderState(orderId);
     }
 

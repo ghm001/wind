@@ -37,9 +37,9 @@ public class OrderController {
         String gasStationName=request.getParameter("gasStationName");
         String gasStationAddress=request.getParameter("gasStationAddress");
         String gasType=request.getParameter("gasType");
-        int gasLitre=Integer.parseInt(request.getParameter("gasLitre"));
-        double gasSinglePrice=Double.parseDouble(request.getParameter("gasSinglePrice"));
-        double gasSumPrice=Double.parseDouble(request.getParameter("gasSumPrice"));
+        Double gasLitre=Double.parseDouble(request.getParameter("gasLitre"));
+        double gasSinglePrice=Double.parseDouble(request.getParameter("gasSinglePrice").trim());
+        double gasSumPrice=Double.parseDouble(request.getParameter("gasSumPrice").trim());
         Date orderTime=new Date();
         OrderVO orderVO=new OrderVO(orderState,cusName,cusPhoneNum,cusPlateNum,gasStationName,gasStationAddress,gasType,gasLitre,gasSinglePrice,gasSumPrice,orderTime,userId);
        orderService.addOrderInfo(orderVO);
@@ -66,6 +66,7 @@ public class OrderController {
         int userId=Integer.parseInt(request.getParameter("userId"));
         List<OrderVO> list=new ArrayList<OrderVO>();
         list=orderService.getWzfOrderInfos(userId);
+        
         for (int i=0;i<list.size();i++){
             Date date=list.get(i).getOrderTime();
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
