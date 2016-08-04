@@ -181,8 +181,6 @@ public class CarMessageController {
         carInfoVO.setIsGoodTran(isGoodTran);
         carInfoVO.setIsGoodLight(isGoodLight);
         carInfoVO.setState(state);
-        System.out.println(carInfoVO.getName());
-
         carMessageService.updateCarInfo(carInfoVO);
     }
 
@@ -273,7 +271,6 @@ public class CarMessageController {
     @RequestMapping(value = "/Car/QueryCar",method = RequestMethod.POST,produces = "text/plain;charset=utf-8")
     public String QueryCar(HttpServletRequest request){
         int userId=Integer.parseInt(request.getParameter("userId").toString().trim());
-        System.out.println(userId+"");
        ZnwhInfoVO znwhInfoVO=carMessageService.quryUser(userId);
         if(znwhInfoVO!=null){
             System.out.println("exist");

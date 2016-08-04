@@ -10,6 +10,9 @@ public interface UserService {
     //获取用户信息---并且登录
     UserVO getUserInfo(String userName);
 
+    //通过用户id获得用户信息
+    UserVO findUserInfoById(int userId);
+
     //注册用户
     void saveUserInfo(UserVO userVO);
 

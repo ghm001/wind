@@ -31,5 +31,6 @@
         <typeAlias type="com.wind.carMessage.model.ZnwhInfoVO" alias="ZnwhInfoVO"/>
         <typeAlias type="com.wind.carMessage.model.WeiZhangInfoVO" alias="WeiZhangInfoVO"/>
         <typeAlias type="com.wind.saying.model.SayingVO" alias="SayingVO"/>
+        <typeAlias type="com.wind.location.model.UserLocationVO" alias="UserLocationVO"/>
     </typeAliases>
 </configuration>

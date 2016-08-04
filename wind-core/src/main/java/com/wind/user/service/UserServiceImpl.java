@@ -19,6 +19,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UserVO findUserInfoById(int userId) {
+        return userDao.findUserInfoById(userId);
+    }
+
+    @Override
     public void saveUserInfo(UserVO userVO) {
         userDao.saveUserInfo(userVO);
     }

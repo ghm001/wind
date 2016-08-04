@@ -64,7 +64,7 @@ public class SayingDaoTest {
     //获得某一条说说
     @Test
     public void getSaying() {
-        int sayingId = 79;
+        int sayingId = 156;
         SayingVO sayingVO = new SayingVO();
         sayingVO = sayingService.getSaying(sayingId);
         System.out.println("用户id号：" + sayingVO.getUserId());

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wind.location.dao.LocationDao">
+    <resultMap id="getUserLocation" type="UserLocationVO">
+        <id property="userLocationId" column="location_id"></id><!--用户所处位置id-->
+        <result property="userId" column="user_id"></result><!--用户id-->
+        <result property="userLat" column="user_lat"></result><!--用户所处位置纬度-->
+        <result property="userLng" column="user_lng"></result><!--用户所处位置经度-->
+        <result property="userAddress" column="user_address"></result><!--用户所处位置详细地址-->
+    </resultMap>
+
+    <insert id="saveUserLocation" parameterType="UserLocationVO">
+        insert into user_location(user_id,user_lat,user_lng,user_address)values(#{userId},#{userLat},#{userLng},#{userAddress});
+    </insert>
+
+    <delete id="deleteUserLocation" parameterType="int">
+        delete from user_location where user_id=#{userId}
+    </delete>
+
+    <select id="findUserLocationByUserId" resultMap="getUserLocation" parameterType="int">
+        select * from user_location where user_id=#{userId}
+    </select>
+</mapper>

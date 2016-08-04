@@ -18,6 +18,10 @@
       select  *  from  user_info  where user_name=#{userName}
     </select>
 
+    <select id="userId" resultType="UserVO">
+        select  *  from  user_info  where userId=#{userId}
+    </select>
+
     <insert id="saveUserInfo" parameterType="UserVO"  >
     insert into user_info (user_name,user_pass)values (#{userName},#{userPass})
     </insert>
