@@ -43,5 +43,10 @@ public class UserServiceImpl implements UserService {
         userDao.updateUserPass(userVO);
     }
 
+    @Override
+    public void updateLoginFlagByUserId(UserVO userVO) {
+        userDao.updateLoginFlagByUserId(userVO);
+    }
+
 
 }

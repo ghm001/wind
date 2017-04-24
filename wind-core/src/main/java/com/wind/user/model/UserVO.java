@@ -18,6 +18,7 @@ public class UserVO {
     private String driverNum;//驾驶证号
     private String message;//登录验证
     private String userIconUrl;
+    private int loginFlag;//登陆标记
 
     public UserVO() {
     }
@@ -94,10 +95,19 @@ public class UserVO {
         this.message = message;
     }
 
+    public int getLoginFlag() {
+        return loginFlag;
+    }
+
+    public void setLoginFlag(int loginFlag) {
+        this.loginFlag = loginFlag;
+    }
+
     @Override
     public String toString() {
         return "UserVO{" +
-                "userName='" + userName + '\'' +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
                 ", userPass='" + userPass + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", sex='" + sex + '\'' +
@@ -105,6 +115,7 @@ public class UserVO {
                 ", driverNum='" + driverNum + '\'' +
                 ", message='" + message + '\'' +
                 ", userIconUrl='" + userIconUrl + '\'' +
+                ", loginFlag=" + loginFlag +
                 '}';
     }
 }

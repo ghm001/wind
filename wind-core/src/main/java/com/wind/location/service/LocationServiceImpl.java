@@ -5,6 +5,8 @@ import com.wind.location.model.UserLocationVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author qiuyong
  * 调用有关用户的服务层的实现
@@ -25,7 +27,18 @@ public class LocationServiceImpl implements LocationService{
     }
 
     @Override
+    public void updateUserLocation(UserLocationVO userLocationVO) {
+        locationDao.updateUserLocation(userLocationVO);
+    }
+
+    @Override
     public UserLocationVO findUserLocationByUserId(int userId) {
         return locationDao.findUserLocationByUserId(userId);
+    }
+
+
+    @Override
+    public List<UserLocationVO> findAllUserLocation() {
+        return locationDao.findAllUserLocation();
     }
 }

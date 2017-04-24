@@ -25,4 +25,7 @@ public interface UserService {
     //修改用户密码
     void updateUserPass(UserVO userVO);
 
+    public void updateLoginFlagByUserId(UserVO userVO);
+
+
 }

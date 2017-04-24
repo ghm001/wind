@@ -25,13 +25,18 @@ public class OrderController {
     @Autowired
     private  OrderService orderService;
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription  为指定用户获取并且保存订单
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "/Order/AddOrderInfo",method = RequestMethod.POST,produces = "text/plain;charset=utf-8")
     public void addOrderInfo(HttpServletRequest request){
         int orderState=0;
         int userId=Integer.parseInt(request.getParameter("userId"));
         String cusName=request.getParameter("cusName");
-        System.out.println(cusName);
         String cusPhoneNum=request.getParameter("cusPhoneNum");
         String cusPlateNum=request.getParameter("cusPlateNum");
         String gasStationName=request.getParameter("gasStationName");
@@ -45,6 +50,12 @@ public class OrderController {
        orderService.addOrderInfo(orderVO);
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription  获取所有订单
+     * @param request
+     * @return String
+     */
     @ResponseBody
       @RequestMapping(value = "/Order/GetOrderInfos",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
       public String getOrderInfos(HttpServletRequest request){
@@ -60,6 +71,12 @@ public class OrderController {
         return json;
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription  获取所有的未支付的订单
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "/Order/GetWzfOrderInfos",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
     public String getWzfOrderInfos(HttpServletRequest request){
@@ -76,6 +93,12 @@ public class OrderController {
         return json;
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription  获取已经支付的订单
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "/Order/GetYzfOrderInfos",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
     public String getYzfOrderInfos(HttpServletRequest request){
@@ -91,6 +114,12 @@ public class OrderController {
         return json;
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription  根据订单号删除订单
+     * @param request
+     * @return String
+     */
     @ResponseBody
        @RequestMapping(value = "/Order/DeleteOrderInfo",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
        public void deleteOrderInfo(HttpServletRequest request){
@@ -98,6 +127,12 @@ public class OrderController {
         orderService.deleteOrderInfo(orderId);
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription  根据订单id号修改订单状态
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "/Order/ChangeOrderState",method = RequestMethod.GET,produces = "text/plain;charset=utf-8")
     public void changeOrderState(HttpServletRequest request){
@@ -105,6 +140,12 @@ public class OrderController {
         orderService.changeOrderState(orderId);
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription  删除一些期望的订单
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "/Order/DeleteHopedOrderInfo",method = RequestMethod.POST,produces = "text/plain;charset=utf-8")
     public void deleteHopedCarInfo(HttpServletRequest request){
@@ -114,7 +155,7 @@ public class OrderController {
         for(int i=0;i<jsonArray.size();i++){
             JSONObject jsonObject= (JSONObject) jsonArray.get(i);
             int orderInfo=Integer.parseInt(jsonObject.getString("value"));
-            System.out.println(orderInfo+"");
+            System.out.println("DeleteHopedOrderInfo:"+orderInfo);
             orderService.deleteOrderInfo(orderInfo);
         }
     }

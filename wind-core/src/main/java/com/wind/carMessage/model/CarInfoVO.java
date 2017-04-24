@@ -193,9 +193,7 @@ public class CarInfoVO {
 
     @Override
     public String toString() {
-        return "CarInfoVO{" +
-                "carInfoId=" + carInfoId +
-                ", brandIndex=" + brandIndex +
+        return "CarInfoVO{" + "carInfoId=" + carInfoId + ", brandIndex=" + brandIndex +
                 ", brandTypeIndex=" + brandTypeIndex +
                 ", carFlag='" + carFlag + '\'' +
                 ", provinceIndex=" + provinceIndex +

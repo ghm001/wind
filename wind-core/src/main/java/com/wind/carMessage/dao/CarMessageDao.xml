@@ -90,7 +90,7 @@
      </update>
 
     <select id="quryUser" parameterType="int" resultMap="znwhInfo">
-        select * from car_info where state=1 and user_id=#{userId}
+         select * from car_info where user_id=#{userId} and state=1
     </select>
 
 </mapper>

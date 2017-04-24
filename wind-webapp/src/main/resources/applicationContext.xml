@@ -27,12 +27,21 @@
         <property name="mapperLocations" value="classpath*:com/wind/**/dao/*.xml"></property>
     </bean>
 
+
+
+
+
     <!--mybatis mapper接口查找器-->
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.wind"></property>
         <property name="annotationClass" value="com.wind.utils.annotation.mybatis.MyBatisScan"></property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
+
+
+
+
+
 
     <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>

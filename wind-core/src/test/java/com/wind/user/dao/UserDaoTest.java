@@ -111,4 +111,38 @@ public class UserDaoTest {
             System.out.println("不存在该用户或用户名|密码有误");
         }
     }
+
+    //通过用户id去获取用户
+    @Test
+    public void testFindUserById(){
+        int userId=1;
+       UserVO userVO=  userService.findUserInfoById(userId);
+        if(userVO==null){
+            System.out.println("error");
+        }else{
+            System.out.println("success");
+        }
+    }
+
+    //修改用户密码
+    @Test
+    public void tesUpdateUserPass(){
+        String userName="13166837709";
+        String userPass="1234567";
+        UserVO userVO=new UserVO();
+        userVO.setUserName(userName);
+        userVO.setUserPass(userPass);
+        userService.updateUserPass(userVO);
+    }
+
+    //修改用户的登录状态
+    @Test
+    public void testChangeLoginFlagByUserId(){
+        UserVO userVO=new UserVO();
+        userVO.setUserId(1);
+        userVO.setLoginFlag(0);
+        userService.updateLoginFlagByUserId(userVO);
+    }
+
+
 }

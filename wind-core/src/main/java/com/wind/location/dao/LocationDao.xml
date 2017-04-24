@@ -7,11 +7,10 @@
         <result property="userId" column="user_id"></result><!--用户id-->
         <result property="userLat" column="user_lat"></result><!--用户所处位置纬度-->
         <result property="userLng" column="user_lng"></result><!--用户所处位置经度-->
-        <result property="userAddress" column="user_address"></result><!--用户所处位置详细地址-->
     </resultMap>
 
     <insert id="saveUserLocation" parameterType="UserLocationVO">
-        insert into user_location(user_id,user_lat,user_lng,user_address)values(#{userId},#{userLat},#{userLng},#{userAddress});
+        insert into user_location(user_id,user_lat,user_lng)values(#{userId},#{userLat},#{userLng});
     </insert>
 
     <delete id="deleteUserLocation" parameterType="int">
@@ -21,4 +20,12 @@
     <select id="findUserLocationByUserId" resultMap="getUserLocation" parameterType="int">
         select * from user_location where user_id=#{userId}
     </select>
+
+    <select id="findAllUserLocation" resultMap="getUserLocation">
+        select location_id,user_id,user_lat,user_lng from user_location
+    </select>
+
+    <update id="updateUserLocation" parameterType="UserLocationVO">
+        update user_location set user_lat=#{userLat},user_lng=#{userLng} where user_id=#{userId}
+    </update>
 </mapper>

@@ -14,6 +14,13 @@ import java.util.Date;
  * Created by Administrator on 2016/5/29.
  */
 public class ImageUtil {
+    /**
+     *  @discrimination 自定义图片文件名并上传图片
+     * @param imgName
+     * @param path
+     * @param ImageContent
+     * @return
+     */
     public static String uploadImg(String imgName,String path,String ImageContent){
 
         //生成图片的随机数

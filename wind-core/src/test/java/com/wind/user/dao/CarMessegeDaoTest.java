@@ -198,6 +198,7 @@ public class CarMessegeDaoTest {
         carInfoVO.setDoorCount(5);
         carInfoVO.setSeatCount(3);
         carInfoVO.setCarFlag("mini.png");
+        carInfoVO.setEngineNum("66668888");
         carInfoVO.setProvinceIndex(1);
         carInfoVO.setChassisNum("123456");
         carInfoVO.setCarLicenceTail("A12345");
@@ -207,7 +208,7 @@ public class CarMessegeDaoTest {
         carInfoVO.setIsGoodEngine(1);
         carInfoVO.setIsGoodLight(0);
         carInfoVO.setIsGoodTran(1);
-        carInfoVO.setState(1);
+        carInfoVO.setState(0);
         carInfoVO.setUserId(1);
         carMessageService.addCarInfo(carInfoVO);
     }
@@ -314,5 +315,35 @@ public class CarMessegeDaoTest {
         System.out.println("车架号：" + weiZhangInfoVO.getChassisNum());
     }
 
+    //获取违章信息
+    @Test
+    public void queryUser(){
+        ZnwhInfoVO znwhInfoVO=carMessageService.quryUser(1);
+        System.out.println(znwhInfoVO.getMileage());
+    }
+
+    //获取保养手册信息
+    @Test
+    public void getByscInfo(){
+        ZnwhInfoVO znwhInfoVO=carMessageService.quryUser(1);
+        List<ByscVO> ls=new ArrayList<ByscVO>();
+        if(null!=znwhInfoVO){
+            double mil=znwhInfoVO.getMileage();
+            ls.add(Utils.jyjlState(mil));
+            ls.add(Utils.hhsState(mil));
+            ls.add(Utils.bsxyState(mil));
+            ls.add(Utils.scyState(mil));
+            ls.add(Utils.klState(mil));
+            ls.add(Utils.ktlxState(mil));
+            ls.add(Utils.zxtState(mil));
+            ls.add(Utils.zxyState(mil));
+            System.out.println("配件状态:0代表正常 1代表需要检查 2代表必须更换 3代表数据不支持");
+            for(int i=0;i<ls.size();i++){
+                System.out.print("编号:"+ls.get(i).getByscNum()+"   ");
+                System.out.print("配件名称:"+ls.get(i).getByxmName()+"  ");
+                System.out.println("配件状态:"+ls.get(i).getByxmState()+"  ");
+            }
+        }
+    }
 
 }

@@ -28,7 +28,13 @@ public class LocationController {
     @Autowired
     UserService userService;//与用户相关的用户
 
-    @RequestMapping(value="/location/saveUserLocation",method = RequestMethod.GET,produces = "text/plain;charset=UTF-8")
+    /**
+     * @author  Aaron_qiuyong
+     * @discription  每间隔一段时间获取用户位置,实现实时监听
+     * @param request
+     * @return String
+     */
+    @RequestMapping(value="/location/saveUserLocation",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
     @ResponseBody
     public String saveUserLocation(HttpServletRequest request){
         Map<String,Object> map=new HashMap<String,Object>();
@@ -36,24 +42,34 @@ public class LocationController {
         int userId=Integer.parseInt(request.getParameter("userId"));
         UserVO userVO=userService.findUserInfoById(userId);
         if(null==userVO){
-            map.put("success","false");
-            map.put("msg","不存在该用户,请重试!");
+            map.put("success",false);
+            map.put("msg","用户异常,请重新登陆重试!");
             String json= JSONObject.fromObject(map).toString();
+            System.out.println("saveUserLocation:"+json);
             return json;
-        }
-        UserLocationVO userLocation=locationService.findUserLocationByUserId(userId);
-        if(null!=userLocation){
-            locationService.deleteUserLocation(userId);
         }
         double userLat=Double.parseDouble(request.getParameter("userLat"));//纬度
         double userLng=Double.parseDouble(request.getParameter("userLng"));//经度
-        String userAddress=request.getParameter("userAddress");
-        UserLocationVO userLocationVO=new UserLocationVO(userId,userLat,userLng,userAddress);
-        map.put("success","true");
+        UserLocationVO userLocation=locationService.findUserLocationByUserId(userId);
+        if(null!=userLocation){
+            UserLocationVO locationVO=new UserLocationVO();
+            locationVO.setUserId(userId);
+            locationVO.setUserLat(userLat);
+            locationVO.setUserLng(userLng);
+            locationService.updateUserLocation(locationVO);
+            map.put("success",true);
+            map.put("msg","用户位置更新完毕!");
+            String json=JSONObject.fromObject(map).toString();
+            System.out.println("saveUserLocation:"+json);
+            return json;
+        }
+        UserLocationVO userLocationVO=new UserLocationVO(userId,userLat,userLng);
+        locationService.saveUserLocation(userLocationVO);
+        map.put("success",true);
         map.put("msg","用户位置更新完毕!");
         String json=JSONObject.fromObject(map).toString();
+        System.out.println("saveUserLocation:"+json);
         return json;
-
     }
 
 }

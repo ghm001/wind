@@ -9,16 +9,14 @@ public class UserLocationVO {
     private int userId;//用户的Id号
     private double userLat;//用户所处纬度
     private double userLng;//用户所处经度
-    private String userAddress;//用户所处的详细地址
 
     public UserLocationVO() {
     }
 
-    public UserLocationVO(int userId, double userLat, double userLng, String userAddress) {
+    public UserLocationVO(int userId, double userLat, double userLng) {
         this.userId = userId;
         this.userLat = userLat;
         this.userLng = userLng;
-        this.userAddress = userAddress;
     }
 
     public int getUserLocationId() {
@@ -51,13 +49,5 @@ public class UserLocationVO {
 
     public void setUserLng(double userLng) {
         this.userLng = userLng;
-    }
-
-    public String getUserAddress() {
-        return userAddress;
-    }
-
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
     }
 }

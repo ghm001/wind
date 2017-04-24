@@ -11,15 +11,15 @@
         <result property = "sex" column ="sex"/>
         <result property = "driverNum" column ="driver_num"/>
         <result property="userIconUrl" column="userIconUrl"/>
-
+        <result property="loginFlag" column="loginFlag"/>
     </resultMap>
 
     <select id="getUserInfo" resultType="UserVO">
       select  *  from  user_info  where user_name=#{userName}
     </select>
 
-    <select id="userId" resultType="UserVO">
-        select  *  from  user_info  where userId=#{userId}
+    <select id="findUserInfoById" resultType="UserVO" parameterType="int">
+        select  *  from  user_info  where user_id=#{userId}
     </select>
 
     <insert id="saveUserInfo" parameterType="UserVO"  >
@@ -36,6 +36,10 @@
 
     <update id="updateUserPass" parameterType="UserVO">
          update  user_info set user_pass=#{userPass} where user_name=#{userName}
+    </update>
+
+    <update id="updateLoginFlagByUserId" parameterType="UserVO">
+        update  user_info set loginFlag=#{loginFlag} where user_id=#{userId}
     </update>
 </mapper>
 

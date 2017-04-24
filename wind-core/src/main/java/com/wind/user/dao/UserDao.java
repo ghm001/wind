@@ -11,21 +11,24 @@ import com.wind.utils.annotation.mybatis.MyBatisScan;
 @MyBatisScan
 public interface UserDao {
     //获得用户信息-校验用户登录并且显示用户信息
-    UserVO getUserInfo(String userName);
+    public UserVO getUserInfo(String userName);
 
     //获取用户信息
-    UserVO findUserInfoById(int userId);
+    public UserVO findUserInfoById(int userId);
 
     //注册用户-利用手机号与密码（通过短信注册）
-    void saveUserInfo(UserVO userVO);
+    public void saveUserInfo(UserVO userVO);
 
     //添加用户头像
-    void addUserIcon(UserVO userVO);
+    public void addUserIcon(UserVO userVO);
 
     //修用户信息
-    void updateUserInfo(UserVO userVO);
+    public void updateUserInfo(UserVO userVO);
 
     //修改用户密码
-    void updateUserPass(UserVO userVO);
+    public void updateUserPass(UserVO userVO);
+
+    //修改登陆状态
+    public void updateLoginFlagByUserId(UserVO userVO);
 
 }

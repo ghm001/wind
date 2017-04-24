@@ -32,17 +32,20 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription 用户登录
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "/UserLogin",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
     public String login(HttpServletRequest request){
         String userName=request.getParameter("userName");
         String userPass=request.getParameter("userPass");
-        System.out.println(userName);
+        System.out.println("UserLogin:"+userName);
         UserVO userVO;
         userVO=userService.getUserInfo(userName);
-        System.out.println(userVO.getUserId()+"");
-        System.out.println(userVO.getUserIconUrl());
-
         if (userVO!=null&&userVO.getUserPass().equals(userPass)){
             userVO.setMessage("success");
         }else{
@@ -50,16 +53,22 @@ public class UserController {
             userVO.setMessage("error");
         }
         String json=new JSONObject().fromObject(userVO).toString();
-        System.out.println(json);
+        System.out.println("UserLogin:"+json);
         return json;
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription 用户注册
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "UserRegister",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
     public String register(HttpServletRequest request) {
         String userName = request.getParameter("userName");
         String userPass = request.getParameter("userPass");
-        System.out.println(userName + "------" + userPass);
+        System.out.println("UserRegister:"+userName + "---" + userPass);
         UserVO userVO = new UserVO();
         userVO.setUserName(userName);
         userVO.setUserPass(userPass);
@@ -67,15 +76,17 @@ public class UserController {
         return "OK";
      }
 
-
+    /**
+     * @author  Aaron_qiuyong
+     * @discription 判断用户是否存在
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "UserJudge",method = RequestMethod.GET,produces = "text/plain;charset=UTF-8")
     public String judgeUser(HttpServletRequest request){
         String userName=request.getParameter("userName");
-
-        System.out.println(userName);
-        UserVO userVO;
-        userVO=userService.getUserInfo(userName);
+        UserVO userVO=userService.getUserInfo(userName);
         if(userVO!=null){
             return "error";
         }else {
@@ -83,6 +94,12 @@ public class UserController {
         }
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription 上传用户头像
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "AddUserIcon",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
     public String addUserIcon(HttpServletRequest request){
@@ -90,7 +107,8 @@ public class UserController {
         String s=request.getParameter("userIconContent");
         //获取服务器存放图片的路径
         String path=request.getSession().getServletContext().getRealPath("/img/user_icon");
-        //生成图片的随机数
+        //生成图片的随
+        // 机数
         Date date=new Date();
         DateFormat dateFormat=new SimpleDateFormat("yyyyMMddHHmmss");
         String time=dateFormat.format(date);
@@ -102,6 +120,7 @@ public class UserController {
        File img=new File(path+fileName);
 
        String oldFile=userService.getUserInfo(userName).getUserIconUrl();
+
         File file=new File(path+oldFile);
         if(file.exists()){
             file.delete();
@@ -123,6 +142,12 @@ public class UserController {
         return null;
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription 修改用户信息
+     * @param request
+     * @return String
+     */
     @ResponseBody
     @RequestMapping(value = "UpdateUserInfo",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
     public String updateUserInfo(HttpServletRequest request){
@@ -131,7 +156,6 @@ public class UserController {
         String nickname=request.getParameter("nickname");
         String iAge=request.getParameter("age");
         String driverNum=request.getParameter("driverNum");
-        System.out.println(userName);
         UserVO userVO=new UserVO();
 
         userVO.setUserName(userName);
@@ -144,12 +168,92 @@ public class UserController {
         return "ok";
     }
 
+    /**
+     * @author  Aaron_qiuyong
+     * @discription 修改用户密码
+     * @param request
+     * @return String
+     */
     @ResponseBody
-    @RequestMapping(value = "UploadImage",method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
-    public String uploadImage(HttpServletRequest request){
-
-        return null;
+    @RequestMapping(value = "user/UpdateUserPass" , method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
+    public String updateUserPass(HttpServletRequest request){
+        Map<String,Object> rtnMap=new HashMap<String, Object>();
+        String userName=request.getParameter("userName");
+        String newUserPass=request.getParameter("newUserPass");
+       UserVO userVO=userService.getUserInfo(userName);
+        if(null!=userVO){
+            userVO.setUserPass(newUserPass);
+            userService.updateUserPass(userVO);
+            //修改登录状态
+            UserVO uVO=new UserVO();
+            uVO.setUserId(userVO.getUserId());
+            uVO.setLoginFlag(0);
+            userService.updateLoginFlagByUserId(uVO);
+            rtnMap.put("success",true);
+            rtnMap.put("msg","密码修改成功!");
+            return JSONObject.fromObject(rtnMap).toString();
+        }
+        rtnMap.put("success",false);
+        rtnMap.put("msg","输入的用户名有误!");
+        return JSONObject.fromObject(rtnMap).toString();
     }
+
+    /**
+     * @author  Aaron_qiuyong
+     * @discription 判断旧密码是否存在
+     * @param request
+     * @return String
+     */
+    @ResponseBody
+    @RequestMapping(value = "user/JdugeUserPass" , method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
+    public String JudgeUserPass(HttpServletRequest request){
+        Map<String,Object> rtnMap=new HashMap<String, Object>();
+        String userName=request.getParameter("userName");
+        String oldUserPass=request.getParameter("oldUserPass");
+        //通过用户名获得用户信息
+        UserVO userVO=userService.getUserInfo(userName);
+        if(userVO==null){
+            rtnMap.put("success",false);
+            rtnMap.put("msg","输入的用户名不存在!");
+            return JSONObject.fromObject(rtnMap).toString();
+        }
+        if(null!=userVO&&!userVO.getUserPass().equals(oldUserPass)){
+            rtnMap.put("success",false);
+            rtnMap.put("msg","输入的旧密码有误!");
+            return JSONObject.fromObject(rtnMap).toString();
+        }
+        rtnMap.put("success",true);
+        rtnMap.put("msg","账号密码校验成功!");
+        return JSONObject.fromObject(rtnMap).toString();
+    }
+
+    /**
+     * @author  Aaron_qiuyong
+     * @discription 修改用户登录标识
+     * @param request
+     * @return String
+     */
+    @RequestMapping(value = "user/ChangeLoginFlag" , method = RequestMethod.POST,produces = "text/plain;charset=UTF-8")
+    @ResponseBody
+    public String changeLoginFlag(HttpServletRequest request){
+        Map<String,Object> rtnMap=new HashMap<String, Object>();
+        int userId=Integer.parseInt(request.getParameter("userId"));
+        int loginFlag=Integer.parseInt(request.getParameter("loginFlag"));
+        System.out.println("ChangeLoginFlag:"+"userId-"+userId+"loginFlag-"+loginFlag);
+        UserVO userVO=userService.findUserInfoById(userId);
+        if(null!=userVO){
+            userVO.setUserId(userId);
+            userVO.setLoginFlag(loginFlag);
+            userService.updateLoginFlagByUserId(userVO);
+            rtnMap.put("success",true);
+            rtnMap.put("msg","登陆状态更新完毕!");
+            return JSONObject.fromObject(rtnMap).toString();
+        }
+        rtnMap.put("success",false);
+        rtnMap.put("msg","登陆状态更改失败,请检查你的网络或者输入是否有误!");
+        return JSONObject.fromObject(rtnMap).toString();
+    }
+
 
 
 
